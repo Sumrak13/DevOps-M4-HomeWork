@@ -1,0 +1,1359 @@
+C:\HashiCorp\M4-Homework>vagrant up
+Bringing machine 'jenkins' up with 'virtualbox' provider...
+==> jenkins: Importing base box 'shekeriev/centos-stream-9'...
+==> jenkins: Matching MAC address for NAT networking...
+==> jenkins: Checking if box 'shekeriev/centos-stream-9' version '0.1' is up to date...
+==> jenkins: Setting the name of the VM: Jenkins-M4
+==> jenkins: Clearing any previously set network interfaces...
+==> jenkins: Preparing network interfaces based on configuration...
+    jenkins: Adapter 1: nat
+    jenkins: Adapter 2: hostonly
+==> jenkins: Forwarding ports...
+    jenkins: 22 (guest) => 2200 (host) (adapter 1)
+    jenkins: 80 (guest) => 8000 (host) (adapter 1)
+    jenkins: 8080 (guest) => 8080 (host) (adapter 1)
+    jenkins: 9070 (guest) => 9070 (host) (adapter 1)
+    jenkins: 22 (guest) => 2222 (host) (adapter 1)
+==> jenkins: Running 'pre-boot' VM customizations...
+==> jenkins: Booting VM...
+==> jenkins: Waiting for machine to boot. This may take a few minutes...
+    jenkins: SSH address: 127.0.0.1:2222
+    jenkins: SSH username: vagrant
+    jenkins: SSH auth method: private key
+==> jenkins: Machine booted and ready!
+==> jenkins: Checking for guest additions in VM...
+    jenkins: The guest additions on this VM do not match the installed version of
+    jenkins: VirtualBox! In most cases this is fine, but in rare cases it can
+    jenkins: prevent things such as shared folders from working properly. If you see
+    jenkins: shared folder errors, please make sure the guest additions within the
+    jenkins: virtual machine match the version of VirtualBox you have installed on
+    jenkins: your host and reload your VM.
+    jenkins:
+    jenkins: Guest Additions Version: 6.1.38
+    jenkins: VirtualBox Version: 7.0
+==> jenkins: Setting hostname...
+==> jenkins: Configuring and enabling network interfaces...
+==> jenkins: Mounting shared folders...
+    jenkins: /vagrant => C:/HashiCorp/M4-Homework/Shared_Data
+==> jenkins: Running provisioner: shell...
+    jenkins: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230301-6924-1wvmo7s.sh
+    jenkins: * Adding host to /etc/hosts ...
+    jenkins: * Firewall - open ports 80,8080,9070 ...
+    jenkins: success
+    jenkins: success
+    jenkins: success
+    jenkins: success
+==> jenkins: Running provisioner: shell...
+    jenkins: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230301-6924-1gsintv.sh
+    jenkins: * Installing Java17...
+    jenkins: CentOS Stream 9 - BaseOS                        1.4 MB/s | 6.1 MB     00:04
+    jenkins: CentOS Stream 9 - AppStream                     1.8 MB/s |  16 MB     00:09
+    jenkins: CentOS Stream 9 - Extras packages               8.9 kB/s |  10 kB     00:01
+    jenkins: Dependencies resolved.
+    jenkins: ===============================================================================================
+    jenkins:  Package                              Arch    Version                          Repo        Size
+    jenkins: ===============================================================================================
+    jenkins: Installing:
+    jenkins:  java-17-openjdk                      x86_64  1:17.0.6.0.9-0.3.ea.el9          appstream  433 k
+    jenkins: Installing dependencies:
+    jenkins:  ModemManager-glib                    x86_64  1.20.2-1.el9                     baseos     335 k
+    jenkins:  adobe-source-code-pro-fonts          noarch  2.030.1.050-12.el9.1             baseos     832 k
+    jenkins:  adwaita-cursor-theme                 noarch  40.1.1-3.el9                     appstream  650 k
+    jenkins:  adwaita-icon-theme                   noarch  40.1.1-3.el9                     appstream   12 M
+    jenkins:  alsa-lib                             x86_64  1.2.8-3.el9                      appstream  517 k
+    jenkins:  at-spi2-atk                          x86_64  2.38.0-4.el9                     appstream   87 k
+    jenkins:  at-spi2-core                         x86_64  2.40.3-1.el9                     appstream  195 k
+    jenkins:  atk                                  x86_64  2.36.0-5.el9                     appstream  292 k
+    jenkins:  avahi-glib                           x86_64  0.8-12.el9                       appstream   15 k
+    jenkins:  avahi-libs                           x86_64  0.8-12.el9                       baseos      68 k
+    jenkins:  bluez-libs                           x86_64  5.56-6.el9                       baseos      85 k
+    jenkins:  bubblewrap                           x86_64  0.4.1-6.el9                      baseos      50 k
+    jenkins:  cairo                                x86_64  1.17.4-7.el9                     appstream  660 k
+    jenkins:  cairo-gobject                        x86_64  1.17.4-7.el9                     appstream   19 k
+    jenkins:  colord-libs                          x86_64  1.4.5-4.el9                      appstream  229 k
+    jenkins:  copy-jdk-configs                     noarch  4.0-3.el9                        appstream   28 k
+    jenkins:  cups-libs                            x86_64  1:2.3.3op2-16.el9                baseos     265 k
+    jenkins:  exempi                               x86_64  2.6.0-0.2.20211007gite23c213.el9 appstream  525 k
+    jenkins:  exiv2-libs                           x86_64  0.27.5-2.el9                     appstream  781 k
+    jenkins:  fdk-aac-free                         x86_64  2.0.0-8.el9                      appstream  325 k
+    jenkins:  flac-libs                            x86_64  1.3.3-10.el9                     appstream  219 k
+    jenkins:  flatpak-selinux                      noarch  1.12.7-2.el9                     appstream   23 k
+    jenkins:  flatpak-session-helper               x86_64  1.12.7-2.el9                     appstream   76 k
+    jenkins:  fontconfig                           x86_64  2.14.0-2.el9                     appstream  297 k
+    jenkins:  freetype                             x86_64  2.10.4-9.el9                     baseos     388 k
+    jenkins:  fribidi                              x86_64  1.0.10-6.el9.2                   appstream   85 k
+    jenkins:  fuse                                 x86_64  2.9.9-15.el9                     baseos      80 k
+    jenkins:  fuse-common                          x86_64  3.10.2-5.el9                     baseos     9.0 k
+    jenkins:  gdk-pixbuf2                          x86_64  2.42.6-3.el9                     appstream  492 k
+    jenkins:  gdk-pixbuf2-modules                  x86_64  2.42.6-3.el9                     appstream   88 k
+    jenkins:  geoclue2                             x86_64  2.6.0-7.el9                      appstream  124 k
+    jenkins:  giflib                               x86_64  5.2.1-9.el9                      appstream   49 k
+    jenkins:  glib-networking                      x86_64  2.68.3-3.el9                     baseos     186 k
+    jenkins:  graphene                             x86_64  1.10.6-2.el9                     appstream   64 k
+    jenkins:  graphite2                            x86_64  1.3.14-9.el9                     baseos      95 k
+    jenkins:  gsettings-desktop-schemas            x86_64  40.0-6.el9                       baseos     684 k
+    jenkins:  gsm                                  x86_64  1.0.19-6.el9                     appstream   34 k
+    jenkins:  gstreamer1                           x86_64  1.18.4-4.el9                     appstream  1.4 M
+    jenkins:  gstreamer1-plugins-base              x86_64  1.18.4-5.el9                     appstream  2.1 M
+    jenkins:  gtk-update-icon-cache                x86_64  3.24.31-2.el9                    appstream   35 k
+    jenkins:  harfbuzz                             x86_64  2.7.4-8.el9                      baseos     625 k
+    jenkins:  hicolor-icon-theme                   noarch  0.17-13.el9                      appstream  219 k
+    jenkins:  iso-codes                            noarch  4.6.0-3.el9                      appstream  3.5 M
+    jenkins:  java-17-openjdk-headless             x86_64  1:17.0.6.0.9-0.3.ea.el9          appstream   42 M
+    jenkins:  javapackages-filesystem              noarch  6.0.0-4.el9                      appstream   13 k
+    jenkins:  jbigkit-libs                         x86_64  2.1-23.el9                       appstream   53 k
+    jenkins:  json-glib                            x86_64  1.6.6-1.el9                      baseos     163 k
+    jenkins:  lcms2                                x86_64  2.12-3.el9                       appstream  168 k
+    jenkins:  libX11                               x86_64  1.7.0-7.el9                      appstream  647 k
+    jenkins:  libX11-common                        noarch  1.7.0-7.el9                      appstream  206 k
+    jenkins:  libX11-xcb                           x86_64  1.7.0-7.el9                      appstream   12 k
+    jenkins:  libXau                               x86_64  1.0.9-8.el9                      appstream   31 k
+    jenkins:  libXcomposite                        x86_64  0.4.5-7.el9                      appstream   24 k
+    jenkins:  libXcursor                           x86_64  1.2.0-7.el9                      appstream   31 k
+    jenkins:  libXdamage                           x86_64  1.1.5-7.el9                      appstream   23 k
+    jenkins:  libXext                              x86_64  1.3.4-8.el9                      appstream   40 k
+    jenkins:  libXfixes                            x86_64  5.0.3-16.el9                     appstream   20 k
+    jenkins:  libXft                               x86_64  2.3.3-8.el9                      appstream   62 k
+    jenkins:  libXi                                x86_64  1.7.10-8.el9                     appstream   40 k
+    jenkins:  libXinerama                          x86_64  1.1.4-10.el9                     appstream   15 k
+    jenkins:  libXrandr                            x86_64  1.5.2-8.el9                      appstream   28 k
+    jenkins:  libXrender                           x86_64  0.9.10-16.el9                    appstream   28 k
+    jenkins:  libXtst                              x86_64  1.2.3-16.el9                     appstream   21 k
+    jenkins:  libXv                                x86_64  1.0.11-16.el9                    appstream   19 k
+    jenkins:  libXxf86vm                           x86_64  1.1.4-18.el9                     appstream   19 k
+    jenkins:  libappstream-glib                    x86_64  0.7.18-4.el9                     appstream  396 k
+    jenkins:  libasyncns                           x86_64  0.8-22.el9                       appstream   30 k
+    jenkins:  libatomic                            x86_64  11.3.1-4.3.el9                   baseos      52 k
+    jenkins:  libcanberra                          x86_64  0.30-26.el9                      appstream   90 k
+    jenkins:  libdatrie                            x86_64  0.2.13-4.el9                     appstream   33 k
+    jenkins:  libdrm                               x86_64  2.4.114-1.el9                    appstream  160 k
+    jenkins:  libepoxy                             x86_64  1.5.5-4.el9                      appstream  241 k
+    jenkins:  libexif                              x86_64  0.6.22-6.el9                     appstream  435 k
+    jenkins:  libfontenc                           x86_64  1.1.3-17.el9                     appstream   31 k
+    jenkins:  libgexiv2                            x86_64  0.12.3-1.el9                     appstream   83 k
+    jenkins:  libglvnd                             x86_64  1:1.3.4-1.el9                    appstream  135 k
+    jenkins:  libglvnd-egl                         x86_64  1:1.3.4-1.el9                    appstream   37 k
+    jenkins:  libglvnd-glx                         x86_64  1:1.3.4-1.el9                    appstream  142 k
+    jenkins:  libgsf                               x86_64  1.14.47-5.el9                    appstream  256 k
+    jenkins:  libgudev                             x86_64  237-1.el9                        baseos      36 k
+    jenkins:  libgusb                              x86_64  0.3.6-3.el9                      baseos      51 k
+    jenkins:  libgxps                              x86_64  0.3.2-3.el9                      appstream   79 k
+    jenkins:  libicu                               x86_64  67.1-9.el9                       baseos     9.6 M
+    jenkins:  libiptcdata                          x86_64  1.0.5-9.el9                      appstream   62 k
+    jenkins:  libjpeg-turbo                        x86_64  2.0.90-6.el9                     appstream  176 k
+    jenkins:  libldac                              x86_64  2.0.2.3-10.el9                   appstream   41 k
+    jenkins:  libnotify                            x86_64  0.7.9-8.el9                      appstream   44 k
+    jenkins:  libogg                               x86_64  2:1.3.4-6.el9                    appstream   34 k
+    jenkins:  libosinfo                            x86_64  1.10.0-1.el9                     appstream  319 k
+    jenkins:  libpciaccess                         x86_64  0.16-6.el9                       baseos      28 k
+    jenkins:  libpng                               x86_64  2:1.6.37-12.el9                  baseos     117 k
+    jenkins:  libproxy                             x86_64  0.4.15-35.el9                    baseos      74 k
+    jenkins:  librsvg2                             x86_64  2.50.7-1.el9                     appstream  3.4 M
+    jenkins:  libsbc                               x86_64  1.4-9.el9                        appstream   45 k
+    jenkins:  libsndfile                           x86_64  1.0.31-7.el9                     appstream  207 k
+    jenkins:  libsoup                              x86_64  2.72.0-8.el9                     appstream  405 k
+    jenkins:  libstemmer                           x86_64  0-18.585svn.el9                  appstream   83 k
+    jenkins:  libthai                              x86_64  0.1.28-8.el9                     appstream  208 k
+    jenkins:  libtheora                            x86_64  1:1.1.1-31.el9                   appstream  164 k
+    jenkins:  libtiff                              x86_64  4.4.0-7.el9                      appstream  196 k
+    jenkins:  libtool-ltdl                         x86_64  2.4.6-45.el9                     appstream   37 k
+    jenkins:  libtracker-sparql                    x86_64  3.1.2-3.el9                      appstream  324 k
+    jenkins:  libusbx                              x86_64  1.0.26-1.el9                     baseos      76 k
+    jenkins:  libvisual                            x86_64  1:0.4.0-34.el9                   appstream  144 k
+    jenkins:  libvorbis                            x86_64  1:1.3.7-5.el9                    appstream  193 k
+    jenkins:  libwayland-client                    x86_64  1.21.0-1.el9                     appstream   33 k
+    jenkins:  libwayland-cursor                    x86_64  1.21.0-1.el9                     appstream   19 k
+    jenkins:  libwayland-egl                       x86_64  1.21.0-1.el9                     appstream   13 k
+    jenkins:  libwayland-server                    x86_64  1.21.0-1.el9                     appstream   42 k
+    jenkins:  libwebp                              x86_64  1.2.0-3.el9                      appstream  278 k
+    jenkins:  libxcb                               x86_64  1.13.1-9.el9                     appstream  243 k
+    jenkins:  libxkbcommon                         x86_64  1.0.3-4.el9                      appstream  133 k
+    jenkins:  libxshmfence                         x86_64  1.3-10.el9                       appstream   13 k
+    jenkins:  libxslt                              x86_64  1.1.34-9.el9                     appstream  243 k
+    jenkins:  lksctp-tools                         x86_64  1.0.19-2.el9                     baseos      94 k
+    jenkins:  llvm-libs                            x86_64  15.0.7-1.el9                     appstream   21 M
+    jenkins:  low-memory-monitor                   x86_64  2.1-4.el9                        appstream   36 k
+    jenkins:  lua                                  x86_64  5.4.2-4.el9                      appstream  188 k
+    jenkins:  lua-posix                            x86_64  35.0-8.el9                       appstream  151 k
+    jenkins:  mesa-libEGL                          x86_64  22.3.0-2.el9                     appstream  125 k
+    jenkins:  mesa-libGL                           x86_64  22.3.0-2.el9                     appstream  169 k
+    jenkins:  mesa-libgbm                          x86_64  22.3.0-2.el9                     appstream   39 k
+    jenkins:  mesa-libglapi                        x86_64  22.3.0-2.el9                     appstream   50 k
+    jenkins:  mesa-vulkan-drivers                  x86_64  22.3.0-2.el9                     appstream  7.4 M
+    jenkins:  mkfontscale                          x86_64  1.2.1-3.el9                      appstream   32 k
+    jenkins:  nspr                                 x86_64  4.34.0-14.el9                    appstream  137 k
+    jenkins:  nss                                  x86_64  3.79.0-14.el9                    appstream  706 k
+    jenkins:  nss-softokn                          x86_64  3.79.0-14.el9                    appstream  380 k
+    jenkins:  nss-softokn-freebl                   x86_64  3.79.0-14.el9                    appstream  332 k
+    jenkins:  nss-sysinit                          x86_64  3.79.0-14.el9                    appstream   22 k
+    jenkins:  nss-util                             x86_64  3.79.0-14.el9                    appstream   90 k
+    jenkins:  openjpeg2                            x86_64  2.4.0-7.el9                      appstream  163 k
+    jenkins:  opus                                 x86_64  1.3.1-10.el9                     appstream  200 k
+    jenkins:  orc                                  x86_64  0.4.31-6.el9                     appstream  184 k
+    jenkins:  osinfo-db                            noarch  20221130-1.el9                   appstream  490 k
+    jenkins:  osinfo-db-tools                      x86_64  1.10.0-1.el9                     appstream   74 k
+    jenkins:  ostree-libs                          x86_64  2022.6-3.el9                     appstream  436 k
+    jenkins:  pango                                x86_64  1.48.7-3.el9                     appstream  302 k
+    jenkins:  pipewire-libs                        x86_64  0.3.47-2.el9                     appstream  1.5 M
+    jenkins:  pixman                               x86_64  0.40.0-5.el9                     appstream  271 k
+    jenkins:  polkit                               x86_64  0.117-11.el9                     baseos     154 k
+    jenkins:  polkit-libs                          x86_64  0.117-11.el9                     baseos     8.3 M
+    jenkins:  polkit-pkla-compat                   x86_64  0.1-21.el9                       baseos      47 k
+    jenkins:  poppler                              x86_64  21.01.0-14.el9                   appstream  1.1 M
+    jenkins:  poppler-data                         noarch  0.4.9-9.el9                      appstream  1.9 M
+    jenkins:  poppler-glib                         x86_64  21.01.0-14.el9                   appstream  153 k
+    jenkins:  pulseaudio-libs                      x86_64  15.0-2.el9                       appstream  679 k
+    jenkins:  pulseaudio-utils                     x86_64  15.0-2.el9                       appstream   76 k
+    jenkins:  rtkit                                x86_64  0.11-28.el9                      appstream   56 k
+    jenkins:  shared-mime-info                     x86_64  2.1-5.el9                        baseos     558 k
+    jenkins:  sound-theme-freedesktop              noarch  0.8-17.el9                       appstream  383 k
+    jenkins:  totem-pl-parser                      x86_64  3.26.6-2.el9                     appstream  152 k
+    jenkins:  tracker                              x86_64  3.1.2-3.el9                      appstream  555 k
+    jenkins:  ttmkfdir                             x86_64  3.0.9-65.el9                     appstream   53 k
+    jenkins:  tzdata-java                          noarch  2022g-2.el9                      appstream  229 k
+    jenkins:  upower                               x86_64  0.99.11-11.el9                   appstream  173 k
+    jenkins:  vulkan-loader                        x86_64  1.3.239.0-1.el9                  appstream  139 k
+    jenkins:  webkit2gtk3-jsc                      x86_64  2.38.5-1.el9                     appstream  6.5 M
+    jenkins:  webrtc-audio-processing              x86_64  0.3.1-8.el9                      appstream  306 k
+    jenkins:  wireplumber                          x86_64  0.4.8-1.el9                      appstream   85 k
+    jenkins:  wireplumber-libs                     x86_64  0.4.8-1.el9                      appstream  325 k
+    jenkins:  xdg-dbus-proxy                       x86_64  0.1.3-1.el9                      appstream   42 k
+    jenkins:  xdg-desktop-portal                   x86_64  1.12.4-1.el9                     appstream  383 k
+    jenkins:  xkeyboard-config                     noarch  2.33-2.el9                       appstream  859 k
+    jenkins:  xml-common                           noarch  0.6.3-58.el9                     appstream   32 k
+    jenkins:  xorg-x11-fonts-Type1                 noarch  7.5-33.el9                       appstream  505 k
+    jenkins: Installing weak dependencies:
+    jenkins:  abattis-cantarell-fonts              noarch  0.301-4.el9                      appstream  365 k
+    jenkins:  dconf                                x86_64  0.40.0-6.el9                     appstream  113 k
+    jenkins:  exiv2                                x86_64  0.27.5-2.el9                     appstream  980 k
+    jenkins:  flatpak                              x86_64  1.12.7-2.el9                     appstream  1.7 M
+    jenkins:  gtk3                                 x86_64  3.24.31-2.el9                    appstream  4.9 M
+    jenkins:  libcanberra-gtk3                     x86_64  0.30-26.el9                      appstream   33 k
+    jenkins:  libproxy-webkitgtk4                  x86_64  0.4.15-35.el9                    appstream   22 k
+    jenkins:  p11-kit-server                       x86_64  0.24.1-2.el9                     appstream  199 k
+    jenkins:  pipewire                             x86_64  0.3.47-2.el9                     appstream   37 k
+    jenkins:  pipewire-alsa                        x86_64  0.3.47-2.el9                     appstream   59 k
+    jenkins:  pipewire-jack-audio-connection-kit   x86_64  0.3.47-2.el9                     appstream  131 k
+    jenkins:  pipewire-pulseaudio                  x86_64  0.3.47-2.el9                     appstream   24 k
+    jenkins:  tracker-miners                       x86_64  3.1.2-3.el9                      appstream  939 k
+    jenkins:  xdg-desktop-portal-gtk               x86_64  1.12.0-3.el9                     appstream  134 k
+    jenkins:
+    jenkins: Transaction Summary
+    jenkins: ===============================================================================================
+    jenkins: Install  181 Packages
+    jenkins:
+    jenkins: Total download size: 159 M
+    jenkins: Installed size: 616 M
+    jenkins: Downloading Packages:
+    jenkins: (1/181): avahi-libs-0.8-12.el9.x86_64.rpm       244 kB/s |  68 kB     00:00
+    jenkins: (2/181): bluez-libs-5.56-6.el9.x86_64.rpm       393 kB/s |  85 kB     00:00
+    jenkins: (3/181): ModemManager-glib-1.20.2-1.el9.x86_64. 517 kB/s | 335 kB     00:00
+    jenkins: (4/181): bubblewrap-0.4.1-6.el9.x86_64.rpm      343 kB/s |  50 kB     00:00
+    jenkins: (5/181): adobe-source-code-pro-fonts-2.030.1.05 1.0 MB/s | 832 kB     00:00
+    jenkins: (6/181): cups-libs-2.3.3op2-16.el9.x86_64.rpm   810 kB/s | 265 kB     00:00
+    jenkins: (7/181): fuse-2.9.9-15.el9.x86_64.rpm           293 kB/s |  80 kB     00:00
+    jenkins: (8/181): fuse-common-3.10.2-5.el9.x86_64.rpm     74 kB/s | 9.0 kB     00:00
+    jenkins: (9/181): freetype-2.10.4-9.el9.x86_64.rpm       729 kB/s | 388 kB     00:00
+    jenkins: (10/181): graphite2-1.3.14-9.el9.x86_64.rpm     498 kB/s |  95 kB     00:00
+    jenkins: (11/181): glib-networking-2.68.3-3.el9.x86_64.r 611 kB/s | 186 kB     00:00
+    jenkins: (12/181): json-glib-1.6.6-1.el9.x86_64.rpm      474 kB/s | 163 kB     00:00
+    jenkins: (13/181): libatomic-11.3.1-4.3.el9.x86_64.rpm   329 kB/s |  52 kB     00:00
+    jenkins: (14/181): gsettings-desktop-schemas-40.0-6.el9. 912 kB/s | 684 kB     00:00
+    jenkins: (15/181): libgudev-237-1.el9.x86_64.rpm         276 kB/s |  36 kB     00:00
+    jenkins: (16/181): harfbuzz-2.7.4-8.el9.x86_64.rpm       801 kB/s | 625 kB     00:00
+    jenkins: (17/181): libgusb-0.3.6-3.el9.x86_64.rpm        348 kB/s |  51 kB     00:00
+    jenkins: (18/181): libpciaccess-0.16-6.el9.x86_64.rpm    159 kB/s |  28 kB     00:00
+    jenkins: (19/181): libpng-1.6.37-12.el9.x86_64.rpm       525 kB/s | 117 kB     00:00
+    jenkins: (20/181): libproxy-0.4.15-35.el9.x86_64.rpm     385 kB/s |  74 kB     00:00
+    jenkins: (21/181): libusbx-1.0.26-1.el9.x86_64.rpm       400 kB/s |  76 kB     00:00
+    jenkins: (22/181): lksctp-tools-1.0.19-2.el9.x86_64.rpm  616 kB/s |  94 kB     00:00
+    jenkins: (23/181): polkit-0.117-11.el9.x86_64.rpm        727 kB/s | 154 kB     00:00
+    jenkins: (24/181): polkit-pkla-compat-0.1-21.el9.x86_64. 238 kB/s |  47 kB     00:00
+    jenkins: (25/181): shared-mime-info-2.1-5.el9.x86_64.rpm 503 kB/s | 558 kB     00:01
+    jenkins: (26/181): abattis-cantarell-fonts-0.301-4.el9.n 320 kB/s | 365 kB     00:01
+    jenkins: (27/181): adwaita-cursor-theme-40.1.1-3.el9.noa 344 kB/s | 650 kB     00:01
+    jenkins: (28/181): polkit-libs-0.117-11.el9.x86_64.rpm   1.1 MB/s | 8.3 MB     00:07
+    jenkins: (29/181): libicu-67.1-9.el9.x86_64.rpm          1.1 MB/s | 9.6 MB     00:08
+    jenkins: (30/181): at-spi2-atk-2.38.0-4.el9.x86_64.rpm   201 kB/s |  87 kB     00:00
+    jenkins: (31/181): alsa-lib-1.2.8-3.el9.x86_64.rpm       349 kB/s | 517 kB     00:01
+    jenkins: (32/181): at-spi2-core-2.40.3-1.el9.x86_64.rpm  690 kB/s | 195 kB     00:00
+    jenkins: (33/181): avahi-glib-0.8-12.el9.x86_64.rpm      165 kB/s |  15 kB     00:00
+    jenkins: (34/181): atk-2.36.0-5.el9.x86_64.rpm           1.6 MB/s | 292 kB     00:00
+    jenkins: (35/181): cairo-gobject-1.17.4-7.el9.x86_64.rpm 165 kB/s |  19 kB     00:00
+    jenkins: (36/181): cairo-1.17.4-7.el9.x86_64.rpm         2.1 MB/s | 660 kB     00:00
+    jenkins: (37/181): colord-libs-1.4.5-4.el9.x86_64.rpm    1.0 MB/s | 229 kB     00:00
+    jenkins: (38/181): copy-jdk-configs-4.0-3.el9.noarch.rpm 207 kB/s |  28 kB     00:00
+    jenkins: (39/181): dconf-0.40.0-6.el9.x86_64.rpm         705 kB/s | 113 kB     00:00
+    jenkins: (40/181): exempi-2.6.0-0.2.20211007gite23c213.e 1.6 MB/s | 525 kB     00:00
+    jenkins: (41/181): exiv2-0.27.5-2.el9.x86_64.rpm         2.5 MB/s | 980 kB     00:00
+    jenkins: (42/181): exiv2-libs-0.27.5-2.el9.x86_64.rpm    1.9 MB/s | 781 kB     00:00
+    jenkins: (43/181): fdk-aac-free-2.0.0-8.el9.x86_64.rpm   1.2 MB/s | 325 kB     00:00
+    jenkins: (44/181): flac-libs-1.3.3-10.el9.x86_64.rpm     903 kB/s | 219 kB     00:00
+    jenkins: (45/181): flatpak-selinux-1.12.7-2.el9.noarch.r 187 kB/s |  23 kB     00:00
+    jenkins: (46/181): adwaita-icon-theme-40.1.1-3.el9.noarc 1.9 MB/s |  12 MB     00:06
+    jenkins: (47/181): flatpak-session-helper-1.12.7-2.el9.x 168 kB/s |  76 kB     00:00
+    jenkins: (48/181): fribidi-1.0.10-6.el9.2.x86_64.rpm     510 kB/s |  85 kB     00:00
+    jenkins: (49/181): fontconfig-2.14.0-2.el9.x86_64.rpm    780 kB/s | 297 kB     00:00
+    jenkins: (50/181): flatpak-1.12.7-2.el9.x86_64.rpm       1.5 MB/s | 1.7 MB     00:01
+    jenkins: (51/181): gdk-pixbuf2-modules-2.42.6-3.el9.x86_ 394 kB/s |  88 kB     00:00
+    jenkins: (52/181): geoclue2-2.6.0-7.el9.x86_64.rpm       688 kB/s | 124 kB     00:00
+    jenkins: (53/181): giflib-5.2.1-9.el9.x86_64.rpm         356 kB/s |  49 kB     00:00
+    jenkins: (54/181): graphene-1.10.6-2.el9.x86_64.rpm      722 kB/s |  64 kB     00:00
+    jenkins: (55/181): gdk-pixbuf2-2.42.6-3.el9.x86_64.rpm   976 kB/s | 492 kB     00:00
+    jenkins: (56/181): gsm-1.0.19-6.el9.x86_64.rpm            96 kB/s |  34 kB     00:00
+    jenkins: (57/181): gtk-update-icon-cache-3.24.31-2.el9.x 178 kB/s |  35 kB     00:00
+    jenkins: (58/181): gstreamer1-1.18.4-4.el9.x86_64.rpm    825 kB/s | 1.4 MB     00:01
+    jenkins: (59/181): hicolor-icon-theme-0.17-13.el9.noarch 635 kB/s | 219 kB     00:00
+    jenkins: (60/181): gstreamer1-plugins-base-1.18.4-5.el9. 981 kB/s | 2.1 MB     00:02
+    jenkins: (61/181): java-17-openjdk-17.0.6.0.9-0.3.ea.el9 719 kB/s | 433 kB     00:00
+    jenkins: (62/181): gtk3-3.24.31-2.el9.x86_64.rpm         1.1 MB/s | 4.9 MB     00:04
+    jenkins: (63/181): iso-codes-4.6.0-3.el9.noarch.rpm      1.2 MB/s | 3.5 MB     00:02
+    jenkins: (64/181): javapackages-filesystem-6.0.0-4.el9.n  60 kB/s |  13 kB     00:00
+    jenkins: (65/181): jbigkit-libs-2.1-23.el9.x86_64.rpm    367 kB/s |  53 kB     00:00
+    jenkins: (66/181): lcms2-2.12-3.el9.x86_64.rpm           284 kB/s | 168 kB     00:00
+    jenkins: (67/181): libX11-1.7.0-7.el9.x86_64.rpm         1.1 MB/s | 647 kB     00:00
+    jenkins: (68/181): libX11-common-1.7.0-7.el9.noarch.rpm  1.0 MB/s | 206 kB     00:00
+    jenkins: (69/181): libX11-xcb-1.7.0-7.el9.x86_64.rpm      85 kB/s |  12 kB     00:00
+    jenkins: (70/181): libXau-1.0.9-8.el9.x86_64.rpm         263 kB/s |  31 kB     00:00
+    jenkins: (71/181): libXcomposite-0.4.5-7.el9.x86_64.rpm  205 kB/s |  24 kB     00:00
+    jenkins: (72/181): libXcursor-1.2.0-7.el9.x86_64.rpm     217 kB/s |  31 kB     00:00
+    jenkins: (73/181): libXdamage-1.1.5-7.el9.x86_64.rpm     157 kB/s |  23 kB     00:00
+    jenkins: (74/181): libXfixes-5.0.3-16.el9.x86_64.rpm      73 kB/s |  20 kB     00:00
+    jenkins: (75/181): libXext-1.3.4-8.el9.x86_64.rpm        119 kB/s |  40 kB     00:00
+    jenkins: (76/181): libXft-2.3.3-8.el9.x86_64.rpm         619 kB/s |  62 kB     00:00
+    jenkins: (77/181): libXi-1.7.10-8.el9.x86_64.rpm         342 kB/s |  40 kB     00:00
+    jenkins: (78/181): libXinerama-1.1.4-10.el9.x86_64.rpm   189 kB/s |  15 kB     00:00
+    jenkins: (79/181): libXrandr-1.5.2-8.el9.x86_64.rpm      385 kB/s |  28 kB     00:00
+    jenkins: (80/181): libXrender-0.9.10-16.el9.x86_64.rpm   342 kB/s |  28 kB     00:00
+    jenkins: (81/181): libXtst-1.2.3-16.el9.x86_64.rpm       275 kB/s |  21 kB     00:00
+    jenkins: (82/181): libXv-1.0.11-16.el9.x86_64.rpm        173 kB/s |  19 kB     00:00
+    jenkins: (83/181): libXxf86vm-1.1.4-18.el9.x86_64.rpm     91 kB/s |  19 kB     00:00
+    jenkins: (84/181): libasyncns-0.8-22.el9.x86_64.rpm      317 kB/s |  30 kB     00:00
+    jenkins: (85/181): libappstream-glib-0.7.18-4.el9.x86_64 896 kB/s | 396 kB     00:00
+    jenkins: (86/181): libcanberra-0.30-26.el9.x86_64.rpm    238 kB/s |  90 kB     00:00
+    jenkins: (87/181): libcanberra-gtk3-0.30-26.el9.x86_64.r 178 kB/s |  33 kB     00:00
+    jenkins: (88/181): libdatrie-0.2.13-4.el9.x86_64.rpm     319 kB/s |  33 kB     00:00
+    jenkins: (89/181): libdrm-2.4.114-1.el9.x86_64.rpm       737 kB/s | 160 kB     00:00
+    jenkins: (90/181): libepoxy-1.5.5-4.el9.x86_64.rpm       805 kB/s | 241 kB     00:00
+    jenkins: (91/181): libexif-0.6.22-6.el9.x86_64.rpm       1.9 MB/s | 435 kB     00:00
+    jenkins: (92/181): libfontenc-1.1.3-17.el9.x86_64.rpm    313 kB/s |  31 kB     00:00
+    jenkins: (93/181): libgexiv2-0.12.3-1.el9.x86_64.rpm     883 kB/s |  83 kB     00:00
+    jenkins: (94/181): libglvnd-1.3.4-1.el9.x86_64.rpm       1.2 MB/s | 135 kB     00:00
+    jenkins: (95/181): libglvnd-egl-1.3.4-1.el9.x86_64.rpm   309 kB/s |  37 kB     00:00
+    jenkins: (96/181): libglvnd-glx-1.3.4-1.el9.x86_64.rpm   222 kB/s | 142 kB     00:00
+    jenkins: (97/181): libgsf-1.14.47-5.el9.x86_64.rpm       349 kB/s | 256 kB     00:00
+    jenkins: (98/181): libgxps-0.3.2-3.el9.x86_64.rpm        427 kB/s |  79 kB     00:00
+    jenkins: (99/181): libiptcdata-1.0.5-9.el9.x86_64.rpm    626 kB/s |  62 kB     00:00
+    jenkins: (100/181): libjpeg-turbo-2.0.90-6.el9.x86_64.rp 754 kB/s | 176 kB     00:00
+    jenkins: (101/181): libldac-2.0.2.3-10.el9.x86_64.rpm    159 kB/s |  41 kB     00:00
+    jenkins: (102/181): libnotify-0.7.9-8.el9.x86_64.rpm     318 kB/s |  44 kB     00:00
+    jenkins: (103/181): libogg-1.3.4-6.el9.x86_64.rpm        300 kB/s |  34 kB     00:00
+    jenkins: (104/181): libproxy-webkitgtk4-0.4.15-35.el9.x8 181 kB/s |  22 kB     00:00
+    jenkins: (105/181): libosinfo-1.10.0-1.el9.x86_64.rpm    1.2 MB/s | 319 kB     00:00
+    jenkins: (106/181): libsbc-1.4-9.el9.x86_64.rpm          208 kB/s |  45 kB     00:00
+    jenkins: (107/181): libsndfile-1.0.31-7.el9.x86_64.rpm   661 kB/s | 207 kB     00:00
+    jenkins: (108/181): libsoup-2.72.0-8.el9.x86_64.rpm      1.2 MB/s | 405 kB     00:00
+    jenkins: (109/181): libstemmer-0-18.585svn.el9.x86_64.rp 381 kB/s |  83 kB     00:00
+    jenkins: (110/181): libthai-0.1.28-8.el9.x86_64.rpm      339 kB/s | 208 kB     00:00
+    jenkins: (111/181): libtheora-1.1.1-31.el9.x86_64.rpm    406 kB/s | 164 kB     00:00
+    jenkins: (112/181): librsvg2-2.50.7-1.el9.x86_64.rpm     1.4 MB/s | 3.4 MB     00:02
+    jenkins: (113/181): libtiff-4.4.0-7.el9.x86_64.rpm       556 kB/s | 196 kB     00:00
+    jenkins: (114/181): libtool-ltdl-2.4.6-45.el9.x86_64.rpm 151 kB/s |  37 kB     00:00
+    jenkins: (115/181): libtracker-sparql-3.1.2-3.el9.x86_64 1.0 MB/s | 324 kB     00:00
+    jenkins: (116/181): libvisual-0.4.0-34.el9.x86_64.rpm    528 kB/s | 144 kB     00:00
+    jenkins: (117/181): libwayland-client-1.21.0-1.el9.x86_6 226 kB/s |  33 kB     00:00
+    jenkins: (118/181): libvorbis-1.3.7-5.el9.x86_64.rpm     634 kB/s | 193 kB     00:00
+    jenkins: (119/181): libwayland-cursor-1.21.0-1.el9.x86_6 184 kB/s |  19 kB     00:00
+    jenkins: (120/181): libwayland-egl-1.21.0-1.el9.x86_64.r  80 kB/s |  13 kB     00:00
+    jenkins: (121/181): libwayland-server-1.21.0-1.el9.x86_6 204 kB/s |  42 kB     00:00
+    jenkins: (122/181): libwebp-1.2.0-3.el9.x86_64.rpm       894 kB/s | 278 kB     00:00
+    jenkins: (123/181): libxcb-1.13.1-9.el9.x86_64.rpm       700 kB/s | 243 kB     00:00
+    jenkins: (124/181): libxkbcommon-1.0.3-4.el9.x86_64.rpm  597 kB/s | 133 kB     00:00
+    jenkins: (125/181): libxshmfence-1.3-10.el9.x86_64.rpm    97 kB/s |  13 kB     00:00
+    jenkins: (126/181): libxslt-1.1.34-9.el9.x86_64.rpm      1.2 MB/s | 243 kB     00:00
+    jenkins: (127/181): low-memory-monitor-2.1-4.el9.x86_64.  52 kB/s |  36 kB     00:00
+    jenkins: (128/181): lua-5.4.2-4.el9.x86_64.rpm           652 kB/s | 188 kB     00:00
+    jenkins: (129/181): lua-posix-35.0-8.el9.x86_64.rpm      764 kB/s | 151 kB     00:00
+    jenkins: (130/181): mesa-libEGL-22.3.0-2.el9.x86_64.rpm  648 kB/s | 125 kB     00:00
+    jenkins: (131/181): mesa-libGL-22.3.0-2.el9.x86_64.rpm   594 kB/s | 169 kB     00:00
+    jenkins: (132/181): mesa-libgbm-22.3.0-2.el9.x86_64.rpm  265 kB/s |  39 kB     00:00
+    jenkins: (133/181): mesa-libglapi-22.3.0-2.el9.x86_64.rp 368 kB/s |  50 kB     00:00
+    jenkins: (134/181): mesa-vulkan-drivers-22.3.0-2.el9.x86 1.8 MB/s | 7.4 MB     00:04
+    jenkins: (135/181): mkfontscale-1.2.1-3.el9.x86_64.rpm   208 kB/s |  32 kB     00:00
+    jenkins: (136/181): nspr-4.34.0-14.el9.x86_64.rpm        669 kB/s | 137 kB     00:00
+    jenkins: (137/181): nss-3.79.0-14.el9.x86_64.rpm         1.3 MB/s | 706 kB     00:00
+    jenkins: (138/181): nss-softokn-3.79.0-14.el9.x86_64.rpm 672 kB/s | 380 kB     00:00
+    jenkins: (139/181): nss-softokn-freebl-3.79.0-14.el9.x86 930 kB/s | 332 kB     00:00
+    jenkins: (140/181): nss-sysinit-3.79.0-14.el9.x86_64.rpm 108 kB/s |  22 kB     00:00
+    jenkins: (141/181): nss-util-3.79.0-14.el9.x86_64.rpm    384 kB/s |  90 kB     00:00
+    jenkins: (142/181): openjpeg2-2.4.0-7.el9.x86_64.rpm     171 kB/s | 163 kB     00:00
+    jenkins: (143/181): opus-1.3.1-10.el9.x86_64.rpm         898 kB/s | 200 kB     00:00
+    jenkins: (144/181): orc-0.4.31-6.el9.x86_64.rpm          712 kB/s | 184 kB     00:00
+    jenkins: (145/181): osinfo-db-20221130-1.el9.noarch.rpm  2.5 MB/s | 490 kB     00:00
+    jenkins: (146/181): osinfo-db-tools-1.10.0-1.el9.x86_64. 751 kB/s |  74 kB     00:00
+    jenkins: (147/181): ostree-libs-2022.6-3.el9.x86_64.rpm  2.3 MB/s | 436 kB     00:00
+    jenkins: (148/181): p11-kit-server-0.24.1-2.el9.x86_64.r 1.3 MB/s | 199 kB     00:00
+    jenkins: (149/181): llvm-libs-15.0.7-1.el9.x86_64.rpm    1.8 MB/s |  21 MB     00:12
+    jenkins: (150/181): pango-1.48.7-3.el9.x86_64.rpm        233 kB/s | 302 kB     00:01
+    jenkins: (151/181): java-17-openjdk-headless-17.0.6.0.9- 1.7 MB/s |  42 MB     00:25
+    jenkins: (152/181): pipewire-0.3.47-2.el9.x86_64.rpm      16 kB/s |  37 kB     00:02
+    jenkins: (153/181): pipewire-alsa-0.3.47-2.el9.x86_64.rp  25 kB/s |  59 kB     00:02
+    jenkins: (154/181): pipewire-jack-audio-connection-kit-0 637 kB/s | 131 kB     00:00
+    jenkins: (155/181): pipewire-pulseaudio-0.3.47-2.el9.x86 102 kB/s |  24 kB     00:00
+    jenkins: (156/181): pixman-0.40.0-5.el9.x86_64.rpm       951 kB/s | 271 kB     00:00
+    jenkins: (157/181): poppler-21.01.0-14.el9.x86_64.rpm    1.8 MB/s | 1.1 MB     00:00
+    jenkins: (158/181): pipewire-libs-0.3.47-2.el9.x86_64.rp 1.5 MB/s | 1.5 MB     00:01
+    jenkins: (159/181): poppler-glib-21.01.0-14.el9.x86_64.r 722 kB/s | 153 kB     00:00
+    jenkins: (160/181): pulseaudio-utils-15.0-2.el9.x86_64.r 349 kB/s |  76 kB     00:00
+    jenkins: (161/181): rtkit-0.11-28.el9.x86_64.rpm         668 kB/s |  56 kB     00:00
+    jenkins: (162/181): pulseaudio-libs-15.0-2.el9.x86_64.rp 1.4 MB/s | 679 kB     00:00
+    jenkins: (163/181): sound-theme-freedesktop-0.8-17.el9.n 2.1 MB/s | 383 kB     00:00
+    jenkins: (164/181): poppler-data-0.4.9-9.el9.noarch.rpm  1.4 MB/s | 1.9 MB     00:01
+    jenkins: (165/181): totem-pl-parser-3.26.6-2.el9.x86_64. 346 kB/s | 152 kB     00:00
+    jenkins: (166/181): tracker-3.1.2-3.el9.x86_64.rpm       1.2 MB/s | 555 kB     00:00
+    jenkins: (167/181): ttmkfdir-3.0.9-65.el9.x86_64.rpm     292 kB/s |  53 kB     00:00
+    jenkins: (168/181): tzdata-java-2022g-2.el9.noarch.rpm   1.8 MB/s | 229 kB     00:00
+    jenkins: (169/181): tracker-miners-3.1.2-3.el9.x86_64.rp 1.8 MB/s | 939 kB     00:00
+    jenkins: (170/181): vulkan-loader-1.3.239.0-1.el9.x86_64 951 kB/s | 139 kB     00:00
+    jenkins: (171/181): upower-0.99.11-11.el9.x86_64.rpm     633 kB/s | 173 kB     00:00
+    jenkins: (172/181): wireplumber-0.4.8-1.el9.x86_64.rpm   843 kB/s |  85 kB     00:00
+    jenkins: (173/181): webrtc-audio-processing-0.3.1-8.el9. 1.3 MB/s | 306 kB     00:00
+    jenkins: (174/181): wireplumber-libs-0.4.8-1.el9.x86_64. 1.2 MB/s | 325 kB     00:00
+    jenkins: (175/181): xdg-dbus-proxy-0.1.3-1.el9.x86_64.rp 182 kB/s |  42 kB     00:00
+    jenkins: (176/181): xdg-desktop-portal-gtk-1.12.0-3.el9. 978 kB/s | 134 kB     00:00
+    jenkins: (177/181): xdg-desktop-portal-1.12.4-1.el9.x86_ 1.3 MB/s | 383 kB     00:00
+    jenkins: (178/181): xml-common-0.6.3-58.el9.noarch.rpm   282 kB/s |  32 kB     00:00
+    jenkins: (179/181): xkeyboard-config-2.33-2.el9.noarch.r 1.4 MB/s | 859 kB     00:00
+    jenkins: (180/181): xorg-x11-fonts-Type1-7.5-33.el9.noar 1.0 MB/s | 505 kB     00:00
+    jenkins: (181/181): webkit2gtk3-jsc-2.38.5-1.el9.x86_64. 3.3 MB/s | 6.5 MB     00:01
+    jenkins: --------------------------------------------------------------------------------
+    jenkins: Total                                           3.3 MB/s | 159 MB     00:48
+    jenkins: Running transaction check
+    jenkins: Transaction check succeeded.
+    jenkins: Running transaction test
+    jenkins: Transaction test succeeded.
+    jenkins: Running transaction
+    jenkins:   Running scriptlet: copy-jdk-configs-4.0-3.el9.noarch                      1/1
+    jenkins:   Running scriptlet: java-17-openjdk-headless-1:17.0.6.0.9-0.3.ea.el9.x86   1/1
+    jenkins:   Preparing        :                                                        1/1
+    jenkins:   Installing       : libpng-2:1.6.37-12.el9.x86_64                        1/181
+    jenkins:   Installing       : nspr-4.34.0-14.el9.x86_64                            2/181
+    jenkins:   Installing       : libjpeg-turbo-2.0.90-6.el9.x86_64                    3/181
+    jenkins:   Installing       : json-glib-1.6.6-1.el9.x86_64                         4/181
+    jenkins:   Installing       : libwayland-client-1.21.0-1.el9.x86_64                5/181
+    jenkins:   Installing       : libogg-2:1.3.4-6.el9.x86_64                          6/181
+    jenkins:   Installing       : alsa-lib-1.2.8-3.el9.x86_64                          7/181
+    jenkins:   Installing       : libvorbis-1:1.3.7-5.el9.x86_64                       8/181
+    jenkins:   Installing       : nss-util-3.79.0-14.el9.x86_64                        9/181
+    jenkins:   Installing       : libX11-xcb-1.7.0-7.el9.x86_64                       10/181
+    jenkins:   Installing       : libicu-67.1-9.el9.x86_64                            11/181
+    jenkins:   Installing       : avahi-libs-0.8-12.el9.x86_64                        12/181
+    jenkins:   Installing       : libxshmfence-1.3-10.el9.x86_64                      13/181
+    jenkins:   Installing       : libstemmer-0-18.585svn.el9.x86_64                   14/181
+    jenkins:   Installing       : lcms2-2.12-3.el9.x86_64                             15/181
+    jenkins:   Installing       : gstreamer1-1.18.4-4.el9.x86_64                      16/181
+    jenkins:   Installing       : atk-2.36.0-5.el9.x86_64                             17/181
+    jenkins:   Installing       : polkit-libs-0.117-11.el9.x86_64                     18/181
+    jenkins:   Running scriptlet: polkit-0.117-11.el9.x86_64                          19/181
+    jenkins:   Installing       : polkit-0.117-11.el9.x86_64                          19/181
+    jenkins:   Running scriptlet: polkit-0.117-11.el9.x86_64                          19/181
+    jenkins:   Installing       : polkit-pkla-compat-0.1-21.el9.x86_64                20/181
+    jenkins:   Installing       : cups-libs-1:2.3.3op2-16.el9.x86_64                  21/181
+    jenkins:   Installing       : libwayland-cursor-1.21.0-1.el9.x86_64               22/181
+    jenkins:   Running scriptlet: xml-common-0.6.3-58.el9.noarch                      23/181
+    jenkins:   Installing       : xml-common-0.6.3-58.el9.noarch                      23/181
+    jenkins:   Installing       : pixman-0.40.0-5.el9.x86_64                          24/181
+    jenkins:   Installing       : opus-1.3.1-10.el9.x86_64                            25/181
+    jenkins:   Installing       : mesa-libglapi-22.3.0-2.el9.x86_64                   26/181
+    jenkins:   Installing       : libwayland-server-1.21.0-1.el9.x86_64               27/181
+    jenkins:   Installing       : libwayland-egl-1.21.0-1.el9.x86_64                  28/181
+    jenkins:   Installing       : libtool-ltdl-2.4.6-45.el9.x86_64                    29/181
+    jenkins:   Installing       : libglvnd-1:1.3.4-1.el9.x86_64                       30/181
+    jenkins:   Installing       : libXau-1.0.9-8.el9.x86_64                           31/181
+    jenkins:   Installing       : libxcb-1.13.1-9.el9.x86_64                          32/181
+    jenkins:   Installing       : fribidi-1.0.10-6.el9.2.x86_64                       33/181
+    jenkins:   Installing       : dconf-0.40.0-6.el9.x86_64                           34/181
+    jenkins:   Running scriptlet: dconf-0.40.0-6.el9.x86_64                           34/181
+    jenkins:   Installing       : libusbx-1.0.26-1.el9.x86_64                         35/181
+    jenkins:   Installing       : libproxy-0.4.15-35.el9.x86_64                       36/181
+    jenkins:   Installing       : libgusb-0.3.6-3.el9.x86_64                          37/181
+    jenkins:   Installing       : colord-libs-1.4.5-4.el9.x86_64                      38/181
+    jenkins:   Installing       : iso-codes-4.6.0-3.el9.noarch                        39/181
+    jenkins:   Running scriptlet: rtkit-0.11-28.el9.x86_64                            40/181
+    jenkins:   Installing       : rtkit-0.11-28.el9.x86_64                            40/181
+    jenkins:   Running scriptlet: rtkit-0.11-28.el9.x86_64                            40/181
+    jenkins: Created symlink /etc/systemd/system/graphical.target.wants/rtkit-daemon.service → /usr/lib/systemd/system/rtkit-daemon.service.
+    jenkins:
+    jenkins:   Installing       : avahi-glib-0.8-12.el9.x86_64                        41/181
+    jenkins:   Installing       : nss-softokn-freebl-3.79.0-14.el9.x86_64             42/181
+    jenkins:   Installing       : nss-softokn-3.79.0-14.el9.x86_64                    43/181
+    jenkins:   Installing       : nss-3.79.0-14.el9.x86_64                            44/181
+    jenkins:   Running scriptlet: nss-3.79.0-14.el9.x86_64                            44/181
+    jenkins:   Installing       : nss-sysinit-3.79.0-14.el9.x86_64                    45/181
+    jenkins:   Installing       : flac-libs-1.3.3-10.el9.x86_64                       46/181
+    jenkins:   Installing       : libtheora-1:1.1.1-31.el9.x86_64                     47/181
+    jenkins:   Installing       : exiv2-libs-0.27.5-2.el9.x86_64                      48/181
+    jenkins:   Installing       : exiv2-0.27.5-2.el9.x86_64                           49/181
+    jenkins:   Installing       : libgexiv2-0.12.3-1.el9.x86_64                       50/181
+    jenkins:   Installing       : xkeyboard-config-2.33-2.el9.noarch                  51/181
+    jenkins:   Installing       : libxkbcommon-1.0.3-4.el9.x86_64                     52/181
+    jenkins:   Installing       : xdg-dbus-proxy-0.1.3-1.el9.x86_64                   53/181
+    jenkins:   Installing       : webrtc-audio-processing-0.3.1-8.el9.x86_64          54/181
+    jenkins:   Installing       : tzdata-java-2022g-2.el9.noarch                      55/181
+    jenkins:   Installing       : totem-pl-parser-3.26.6-2.el9.x86_64                 56/181
+    jenkins:   Installing       : sound-theme-freedesktop-0.8-17.el9.noarch           57/181
+    jenkins:   Running scriptlet: sound-theme-freedesktop-0.8-17.el9.noarch           57/181
+    jenkins:   Installing       : poppler-data-0.4.9-9.el9.noarch                     58/181
+    jenkins:   Installing       : p11-kit-server-0.24.1-2.el9.x86_64                  59/181
+    jenkins:   Installing       : ostree-libs-2022.6-3.el9.x86_64                     60/181
+    jenkins:   Installing       : osinfo-db-20221130-1.el9.noarch                     61/181
+    jenkins:   Installing       : orc-0.4.31-6.el9.x86_64                             62/181
+    jenkins:   Installing       : openjpeg2-2.4.0-7.el9.x86_64                        63/181
+    jenkins:   Installing       : lua-posix-35.0-8.el9.x86_64                         64/181
+    jenkins:   Installing       : lua-5.4.2-4.el9.x86_64                              65/181
+    jenkins:   Installing       : copy-jdk-configs-4.0-3.el9.noarch                   66/181
+    jenkins:   Installing       : low-memory-monitor-2.1-4.el9.x86_64                 67/181
+    jenkins:   Running scriptlet: low-memory-monitor-2.1-4.el9.x86_64                 67/181
+    jenkins: Created symlink /etc/systemd/system/basic.target.wants/low-memory-monitor.service → /usr/lib/systemd/system/low-memory-monitor.service.
+    jenkins:
+    jenkins:   Installing       : llvm-libs-15.0.7-1.el9.x86_64                       68/181
+    jenkins:   Installing       : libxslt-1.1.34-9.el9.x86_64                         69/181
+    jenkins:   Installing       : libwebp-1.2.0-3.el9.x86_64                          70/181
+    jenkins:   Installing       : libvisual-1:0.4.0-34.el9.x86_64                     71/181
+    jenkins:   Installing       : libsbc-1.4-9.el9.x86_64                             72/181
+    jenkins:   Installing       : libldac-2.0.2.3-10.el9.x86_64                       73/181
+    jenkins:   Installing       : libiptcdata-1.0.5-9.el9.x86_64                      74/181
+    jenkins:   Installing       : libfontenc-1.1.3-17.el9.x86_64                      75/181
+    jenkins:   Installing       : libexif-0.6.22-6.el9.x86_64                         76/181
+    jenkins:   Installing       : libepoxy-1.5.5-4.el9.x86_64                         77/181
+    jenkins:   Installing       : libdatrie-0.2.13-4.el9.x86_64                       78/181
+    jenkins:   Installing       : libthai-0.1.28-8.el9.x86_64                         79/181
+    jenkins:   Installing       : libasyncns-0.8-22.el9.x86_64                        80/181
+    jenkins:   Installing       : libX11-common-1.7.0-7.el9.noarch                    81/181
+    jenkins:   Installing       : libX11-1.7.0-7.el9.x86_64                           82/181
+    jenkins:   Installing       : libXext-1.3.4-8.el9.x86_64                          83/181
+    jenkins:   Installing       : libXrender-0.9.10-16.el9.x86_64                     84/181
+    jenkins:   Installing       : libXi-1.7.10-8.el9.x86_64                           85/181
+    jenkins:   Installing       : libXfixes-5.0.3-16.el9.x86_64                       86/181
+    jenkins:   Installing       : libXtst-1.2.3-16.el9.x86_64                         87/181
+    jenkins:   Installing       : libXcomposite-0.4.5-7.el9.x86_64                    88/181
+    jenkins:   Installing       : at-spi2-core-2.40.3-1.el9.x86_64                    89/181
+    jenkins:   Installing       : at-spi2-atk-2.38.0-4.el9.x86_64                     90/181
+    jenkins:   Installing       : libXcursor-1.2.0-7.el9.x86_64                       91/181
+    jenkins:   Installing       : libXdamage-1.1.5-7.el9.x86_64                       92/181
+    jenkins:   Installing       : libXrandr-1.5.2-8.el9.x86_64                        93/181
+    jenkins:   Installing       : libXinerama-1.1.4-10.el9.x86_64                     94/181
+    jenkins:   Installing       : libXv-1.0.11-16.el9.x86_64                          95/181
+    jenkins:   Installing       : libXxf86vm-1.1.4-18.el9.x86_64                      96/181
+    jenkins:   Installing       : jbigkit-libs-2.1-23.el9.x86_64                      97/181
+    jenkins:   Installing       : libtiff-4.4.0-7.el9.x86_64                          98/181
+    jenkins:   Installing       : javapackages-filesystem-6.0.0-4.el9.noarch          99/181
+    jenkins:   Installing       : hicolor-icon-theme-0.17-13.el9.noarch              100/181
+    jenkins:   Installing       : gsm-1.0.19-6.el9.x86_64                            101/181
+    jenkins:   Installing       : libsndfile-1.0.31-7.el9.x86_64                     102/181
+    jenkins:   Installing       : pulseaudio-libs-15.0-2.el9.x86_64                  103/181
+    jenkins:   Installing       : libcanberra-0.30-26.el9.x86_64                     104/181
+    jenkins:   Running scriptlet: libcanberra-0.30-26.el9.x86_64                     104/181
+    jenkins:   Installing       : pulseaudio-utils-15.0-2.el9.x86_64                 105/181
+    jenkins:   Installing       : graphene-1.10.6-2.el9.x86_64                       106/181
+    jenkins:   Installing       : giflib-5.2.1-9.el9.x86_64                          107/181
+    jenkins:   Installing       : flatpak-session-helper-1.12.7-2.el9.x86_64         108/181
+    jenkins:   Installing       : flatpak-selinux-1.12.7-2.el9.noarch                109/181
+    jenkins:   Running scriptlet: flatpak-selinux-1.12.7-2.el9.noarch                109/181
+    jenkins:   Installing       : fdk-aac-free-2.0.0-8.el9.x86_64                    110/181
+    jenkins:   Installing       : exempi-2.6.0-0.2.20211007gite23c213.el9.x86_64     111/181
+    jenkins:   Installing       : adwaita-cursor-theme-40.1.1-3.el9.noarch           112/181
+    jenkins:   Installing       : adwaita-icon-theme-40.1.1-3.el9.noarch             113/181
+    jenkins:   Installing       : abattis-cantarell-fonts-0.301-4.el9.noarch         114/181
+    jenkins:   Installing       : shared-mime-info-2.1-5.el9.x86_64                  115/181
+    jenkins:   Running scriptlet: shared-mime-info-2.1-5.el9.x86_64                  115/181
+    jenkins:   Installing       : gdk-pixbuf2-2.42.6-3.el9.x86_64                    116/181
+    jenkins:   Installing       : gdk-pixbuf2-modules-2.42.6-3.el9.x86_64            117/181
+    jenkins:   Installing       : gtk-update-icon-cache-3.24.31-2.el9.x86_64         118/181
+    jenkins:   Installing       : libgsf-1.14.47-5.el9.x86_64                        119/181
+    jenkins:   Installing       : libnotify-0.7.9-8.el9.x86_64                       120/181
+    jenkins:   Installing       : lksctp-tools-1.0.19-2.el9.x86_64                   121/181
+    jenkins:   Installing       : java-17-openjdk-headless-1:17.0.6.0.9-0.3.ea.el9   122/181
+    jenkins:   Running scriptlet: java-17-openjdk-headless-1:17.0.6.0.9-0.3.ea.el9   122/181
+    jenkins:   Installing       : libpciaccess-0.16-6.el9.x86_64                     123/181
+    jenkins:   Installing       : libdrm-2.4.114-1.el9.x86_64                        124/181
+    jenkins:   Installing       : libglvnd-glx-1:1.3.4-1.el9.x86_64                  125/181
+    jenkins:   Installing       : mesa-libGL-22.3.0-2.el9.x86_64                     126/181
+    jenkins:   Installing       : mesa-libgbm-22.3.0-2.el9.x86_64                    127/181
+    jenkins:   Installing       : libglvnd-egl-1:1.3.4-1.el9.x86_64                  128/181
+    jenkins:   Installing       : mesa-libEGL-22.3.0-2.el9.x86_64                    129/181
+    jenkins:   Installing       : vulkan-loader-1.3.239.0-1.el9.x86_64               130/181
+    jenkins:   Installing       : mesa-vulkan-drivers-22.3.0-2.el9.x86_64            131/181
+    jenkins:   Installing       : libgudev-237-1.el9.x86_64                          132/181
+    jenkins:   Installing       : upower-0.99.11-11.el9.x86_64                       133/181
+    jenkins:   Running scriptlet: upower-0.99.11-11.el9.x86_64                       133/181
+    jenkins: Created symlink /etc/systemd/system/graphical.target.wants/upower.service → /usr/lib/systemd/system/upower.service.
+    jenkins:
+    jenkins:   Installing       : libatomic-11.3.1-4.3.el9.x86_64                    134/181
+    jenkins:   Installing       : webkit2gtk3-jsc-2.38.5-1.el9.x86_64                135/181
+    jenkins:   Installing       : libproxy-webkitgtk4-0.4.15-35.el9.x86_64           136/181
+    jenkins:   Installing       : graphite2-1.3.14-9.el9.x86_64                      137/181
+    jenkins:   Installing       : harfbuzz-2.7.4-8.el9.x86_64                        138/181
+    jenkins:   Installing       : freetype-2.10.4-9.el9.x86_64                       139/181
+    jenkins:   Installing       : fontconfig-2.14.0-2.el9.x86_64                     140/181
+    jenkins:   Running scriptlet: fontconfig-2.14.0-2.el9.x86_64                     140/181
+    jenkins:   Installing       : cairo-1.17.4-7.el9.x86_64                          141/181
+    jenkins:   Installing       : cairo-gobject-1.17.4-7.el9.x86_64                  142/181
+    jenkins:   Installing       : libgxps-0.3.2-3.el9.x86_64                         143/181
+    jenkins:   Installing       : libXft-2.3.3-8.el9.x86_64                          144/181
+    jenkins:   Installing       : pango-1.48.7-3.el9.x86_64                          145/181
+    jenkins:   Installing       : gstreamer1-plugins-base-1.18.4-5.el9.x86_64        146/181
+    jenkins:   Installing       : librsvg2-2.50.7-1.el9.x86_64                       147/181
+    jenkins:   Installing       : poppler-21.01.0-14.el9.x86_64                      148/181
+    jenkins:   Installing       : poppler-glib-21.01.0-14.el9.x86_64                 149/181
+    jenkins:   Installing       : mkfontscale-1.2.1-3.el9.x86_64                     150/181
+    jenkins:   Installing       : ttmkfdir-3.0.9-65.el9.x86_64                       151/181
+    jenkins:   Installing       : xorg-x11-fonts-Type1-7.5-33.el9.noarch             152/181
+    jenkins:   Running scriptlet: xorg-x11-fonts-Type1-7.5-33.el9.noarch             152/181
+    jenkins:   Installing       : fuse-common-3.10.2-5.el9.x86_64                    153/181
+    jenkins:   Installing       : fuse-2.9.9-15.el9.x86_64                           154/181
+    jenkins:   Installing       : bubblewrap-0.4.1-6.el9.x86_64                      155/181
+    jenkins:   Installing       : bluez-libs-5.56-6.el9.x86_64                       156/181
+    jenkins:   Running scriptlet: pipewire-0.3.47-2.el9.x86_64                       157/181
+    jenkins:   Installing       : pipewire-0.3.47-2.el9.x86_64                       157/181
+    jenkins:   Running scriptlet: pipewire-0.3.47-2.el9.x86_64                       157/181
+    jenkins: Created symlink /etc/systemd/user/sockets.target.wants/pipewire.socket → /usr/lib/systemd/user/pipewire.socket.
+    jenkins:
+    jenkins:   Installing       : pipewire-libs-0.3.47-2.el9.x86_64                  158/181
+    jenkins:   Installing       : wireplumber-libs-0.4.8-1.el9.x86_64                159/181
+    jenkins:   Installing       : wireplumber-0.4.8-1.el9.x86_64                     160/181
+    jenkins:   Running scriptlet: wireplumber-0.4.8-1.el9.x86_64                     160/181
+    jenkins: Created symlink /etc/systemd/user/pipewire-session-manager.service → /usr/lib/systemd/user/wireplumber.service.
+    jenkins: Created symlink /etc/systemd/user/pipewire.service.wants/wireplumber.service → /usr/lib/systemd/user/wireplumber.service.
+    jenkins:
+    jenkins:   Installing       : adobe-source-code-pro-fonts-2.030.1.050-12.el9.1   161/181
+    jenkins:   Installing       : gsettings-desktop-schemas-40.0-6.el9.x86_64        162/181
+    jenkins:   Installing       : glib-networking-2.68.3-3.el9.x86_64                163/181
+    jenkins:   Installing       : libsoup-2.72.0-8.el9.x86_64                        164/181
+    jenkins:   Installing       : libappstream-glib-0.7.18-4.el9.x86_64              165/181
+    jenkins:   Installing       : osinfo-db-tools-1.10.0-1.el9.x86_64                166/181
+    jenkins:   Installing       : libosinfo-1.10.0-1.el9.x86_64                      167/181
+    jenkins:   Installing       : libtracker-sparql-3.1.2-3.el9.x86_64               168/181
+    jenkins:   Installing       : tracker-3.1.2-3.el9.x86_64                         169/181
+    jenkins:   Running scriptlet: tracker-3.1.2-3.el9.x86_64                         169/181
+    jenkins:   Installing       : tracker-miners-3.1.2-3.el9.x86_64                  170/181
+    jenkins:   Running scriptlet: tracker-miners-3.1.2-3.el9.x86_64                  170/181
+    jenkins:   Installing       : ModemManager-glib-1.20.2-1.el9.x86_64              171/181
+    jenkins:   Running scriptlet: geoclue2-2.6.0-7.el9.x86_64                        172/181
+    jenkins:   Installing       : geoclue2-2.6.0-7.el9.x86_64                        172/181
+    jenkins:   Running scriptlet: geoclue2-2.6.0-7.el9.x86_64                        172/181
+    jenkins:   Running scriptlet: flatpak-1.12.7-2.el9.x86_64                        173/181
+    jenkins:   Installing       : flatpak-1.12.7-2.el9.x86_64                        173/181
+    jenkins:   Installing       : xdg-desktop-portal-1.12.4-1.el9.x86_64             174/181
+    jenkins:   Running scriptlet: xdg-desktop-portal-1.12.4-1.el9.x86_64             174/181
+    jenkins:   Installing       : libcanberra-gtk3-0.30-26.el9.x86_64                175/181
+    jenkins:   Installing       : gtk3-3.24.31-2.el9.x86_64                          176/181
+    jenkins:   Installing       : xdg-desktop-portal-gtk-1.12.0-3.el9.x86_64         177/181
+    jenkins:   Running scriptlet: xdg-desktop-portal-gtk-1.12.0-3.el9.x86_64         177/181
+    jenkins:   Installing       : java-17-openjdk-1:17.0.6.0.9-0.3.ea.el9.x86_64     178/181
+    jenkins:   Running scriptlet: java-17-openjdk-1:17.0.6.0.9-0.3.ea.el9.x86_64     178/181
+    jenkins:   Installing       : pipewire-alsa-0.3.47-2.el9.x86_64                  179/181
+    jenkins:   Installing       : pipewire-jack-audio-connection-kit-0.3.47-2.el9.   180/181
+    jenkins:   Installing       : pipewire-pulseaudio-0.3.47-2.el9.x86_64            181/181
+    jenkins:   Running scriptlet: pipewire-pulseaudio-0.3.47-2.el9.x86_64            181/181
+    jenkins: Created symlink /etc/systemd/user/sockets.target.wants/pipewire-pulse.socket → /usr/lib/systemd/user/pipewire-pulse.socket.
+    jenkins:
+    jenkins:   Running scriptlet: dconf-0.40.0-6.el9.x86_64                          181/181
+    jenkins:   Running scriptlet: nss-3.79.0-14.el9.x86_64                           181/181
+    jenkins:   Running scriptlet: copy-jdk-configs-4.0-3.el9.noarch                  181/181
+    jenkins:   Running scriptlet: java-17-openjdk-headless-1:17.0.6.0.9-0.3.ea.el9   181/181
+    jenkins:   Running scriptlet: fontconfig-2.14.0-2.el9.x86_64                     181/181
+    jenkins:   Running scriptlet: java-17-openjdk-1:17.0.6.0.9-0.3.ea.el9.x86_64     181/181
+    jenkins:   Running scriptlet: pipewire-pulseaudio-0.3.47-2.el9.x86_64            181/181
+    jenkins:   Verifying        : ModemManager-glib-1.20.2-1.el9.x86_64                1/181
+    jenkins:   Verifying        : adobe-source-code-pro-fonts-2.030.1.050-12.el9.1     2/181
+    jenkins:   Verifying        : avahi-libs-0.8-12.el9.x86_64                         3/181
+    jenkins:   Verifying        : bluez-libs-5.56-6.el9.x86_64                         4/181
+    jenkins:   Verifying        : bubblewrap-0.4.1-6.el9.x86_64                        5/181
+    jenkins:   Verifying        : cups-libs-1:2.3.3op2-16.el9.x86_64                   6/181
+    jenkins:   Verifying        : freetype-2.10.4-9.el9.x86_64                         7/181
+    jenkins:   Verifying        : fuse-2.9.9-15.el9.x86_64                             8/181
+    jenkins:   Verifying        : fuse-common-3.10.2-5.el9.x86_64                      9/181
+    jenkins:   Verifying        : glib-networking-2.68.3-3.el9.x86_64                 10/181
+    jenkins:   Verifying        : graphite2-1.3.14-9.el9.x86_64                       11/181
+    jenkins:   Verifying        : gsettings-desktop-schemas-40.0-6.el9.x86_64         12/181
+    jenkins:   Verifying        : harfbuzz-2.7.4-8.el9.x86_64                         13/181
+    jenkins:   Verifying        : json-glib-1.6.6-1.el9.x86_64                        14/181
+    jenkins:   Verifying        : libatomic-11.3.1-4.3.el9.x86_64                     15/181
+    jenkins:   Verifying        : libgudev-237-1.el9.x86_64                           16/181
+    jenkins:   Verifying        : libgusb-0.3.6-3.el9.x86_64                          17/181
+    jenkins:   Verifying        : libicu-67.1-9.el9.x86_64                            18/181
+    jenkins:   Verifying        : libpciaccess-0.16-6.el9.x86_64                      19/181
+    jenkins:   Verifying        : libpng-2:1.6.37-12.el9.x86_64                       20/181
+    jenkins:   Verifying        : libproxy-0.4.15-35.el9.x86_64                       21/181
+    jenkins:   Verifying        : libusbx-1.0.26-1.el9.x86_64                         22/181
+    jenkins:   Verifying        : lksctp-tools-1.0.19-2.el9.x86_64                    23/181
+    jenkins:   Verifying        : polkit-0.117-11.el9.x86_64                          24/181
+    jenkins:   Verifying        : polkit-libs-0.117-11.el9.x86_64                     25/181
+    jenkins:   Verifying        : polkit-pkla-compat-0.1-21.el9.x86_64                26/181
+    jenkins:   Verifying        : shared-mime-info-2.1-5.el9.x86_64                   27/181
+    jenkins:   Verifying        : abattis-cantarell-fonts-0.301-4.el9.noarch          28/181
+    jenkins:   Verifying        : adwaita-cursor-theme-40.1.1-3.el9.noarch            29/181
+    jenkins:   Verifying        : adwaita-icon-theme-40.1.1-3.el9.noarch              30/181
+    jenkins:   Verifying        : alsa-lib-1.2.8-3.el9.x86_64                         31/181
+    jenkins:   Verifying        : at-spi2-atk-2.38.0-4.el9.x86_64                     32/181
+    jenkins:   Verifying        : at-spi2-core-2.40.3-1.el9.x86_64                    33/181
+    jenkins:   Verifying        : atk-2.36.0-5.el9.x86_64                             34/181
+    jenkins:   Verifying        : avahi-glib-0.8-12.el9.x86_64                        35/181
+    jenkins:   Verifying        : cairo-1.17.4-7.el9.x86_64                           36/181
+    jenkins:   Verifying        : cairo-gobject-1.17.4-7.el9.x86_64                   37/181
+    jenkins:   Verifying        : colord-libs-1.4.5-4.el9.x86_64                      38/181
+    jenkins:   Verifying        : copy-jdk-configs-4.0-3.el9.noarch                   39/181
+    jenkins:   Verifying        : dconf-0.40.0-6.el9.x86_64                           40/181
+    jenkins:   Verifying        : exempi-2.6.0-0.2.20211007gite23c213.el9.x86_64      41/181
+    jenkins:   Verifying        : exiv2-0.27.5-2.el9.x86_64                           42/181
+    jenkins:   Verifying        : exiv2-libs-0.27.5-2.el9.x86_64                      43/181
+    jenkins:   Verifying        : fdk-aac-free-2.0.0-8.el9.x86_64                     44/181
+    jenkins:   Verifying        : flac-libs-1.3.3-10.el9.x86_64                       45/181
+    jenkins:   Verifying        : flatpak-1.12.7-2.el9.x86_64                         46/181
+    jenkins:   Verifying        : flatpak-selinux-1.12.7-2.el9.noarch                 47/181
+    jenkins:   Verifying        : flatpak-session-helper-1.12.7-2.el9.x86_64          48/181
+    jenkins:   Verifying        : fontconfig-2.14.0-2.el9.x86_64                      49/181
+    jenkins:   Verifying        : fribidi-1.0.10-6.el9.2.x86_64                       50/181
+    jenkins:   Verifying        : gdk-pixbuf2-2.42.6-3.el9.x86_64                     51/181
+    jenkins:   Verifying        : gdk-pixbuf2-modules-2.42.6-3.el9.x86_64             52/181
+    jenkins:   Verifying        : geoclue2-2.6.0-7.el9.x86_64                         53/181
+    jenkins:   Verifying        : giflib-5.2.1-9.el9.x86_64                           54/181
+    jenkins:   Verifying        : graphene-1.10.6-2.el9.x86_64                        55/181
+    jenkins:   Verifying        : gsm-1.0.19-6.el9.x86_64                             56/181
+    jenkins:   Verifying        : gstreamer1-1.18.4-4.el9.x86_64                      57/181
+    jenkins:   Verifying        : gstreamer1-plugins-base-1.18.4-5.el9.x86_64         58/181
+    jenkins:   Verifying        : gtk-update-icon-cache-3.24.31-2.el9.x86_64          59/181
+    jenkins:   Verifying        : gtk3-3.24.31-2.el9.x86_64                           60/181
+    jenkins:   Verifying        : hicolor-icon-theme-0.17-13.el9.noarch               61/181
+    jenkins:   Verifying        : iso-codes-4.6.0-3.el9.noarch                        62/181
+    jenkins:   Verifying        : java-17-openjdk-1:17.0.6.0.9-0.3.ea.el9.x86_64      63/181
+    jenkins:   Verifying        : java-17-openjdk-headless-1:17.0.6.0.9-0.3.ea.el9    64/181
+    jenkins:   Verifying        : javapackages-filesystem-6.0.0-4.el9.noarch          65/181
+    jenkins:   Verifying        : jbigkit-libs-2.1-23.el9.x86_64                      66/181
+    jenkins:   Verifying        : lcms2-2.12-3.el9.x86_64                             67/181
+    jenkins:   Verifying        : libX11-1.7.0-7.el9.x86_64                           68/181
+    jenkins:   Verifying        : libX11-common-1.7.0-7.el9.noarch                    69/181
+    jenkins:   Verifying        : libX11-xcb-1.7.0-7.el9.x86_64                       70/181
+    jenkins:   Verifying        : libXau-1.0.9-8.el9.x86_64                           71/181
+    jenkins:   Verifying        : libXcomposite-0.4.5-7.el9.x86_64                    72/181
+    jenkins:   Verifying        : libXcursor-1.2.0-7.el9.x86_64                       73/181
+    jenkins:   Verifying        : libXdamage-1.1.5-7.el9.x86_64                       74/181
+    jenkins:   Verifying        : libXext-1.3.4-8.el9.x86_64                          75/181
+    jenkins:   Verifying        : libXfixes-5.0.3-16.el9.x86_64                       76/181
+    jenkins:   Verifying        : libXft-2.3.3-8.el9.x86_64                           77/181
+    jenkins:   Verifying        : libXi-1.7.10-8.el9.x86_64                           78/181
+    jenkins:   Verifying        : libXinerama-1.1.4-10.el9.x86_64                     79/181
+    jenkins:   Verifying        : libXrandr-1.5.2-8.el9.x86_64                        80/181
+    jenkins:   Verifying        : libXrender-0.9.10-16.el9.x86_64                     81/181
+    jenkins:   Verifying        : libXtst-1.2.3-16.el9.x86_64                         82/181
+    jenkins:   Verifying        : libXv-1.0.11-16.el9.x86_64                          83/181
+    jenkins:   Verifying        : libXxf86vm-1.1.4-18.el9.x86_64                      84/181
+    jenkins:   Verifying        : libappstream-glib-0.7.18-4.el9.x86_64               85/181
+    jenkins:   Verifying        : libasyncns-0.8-22.el9.x86_64                        86/181
+    jenkins:   Verifying        : libcanberra-0.30-26.el9.x86_64                      87/181
+    jenkins:   Verifying        : libcanberra-gtk3-0.30-26.el9.x86_64                 88/181
+    jenkins:   Verifying        : libdatrie-0.2.13-4.el9.x86_64                       89/181
+    jenkins:   Verifying        : libdrm-2.4.114-1.el9.x86_64                         90/181
+    jenkins:   Verifying        : libepoxy-1.5.5-4.el9.x86_64                         91/181
+    jenkins:   Verifying        : libexif-0.6.22-6.el9.x86_64                         92/181
+    jenkins:   Verifying        : libfontenc-1.1.3-17.el9.x86_64                      93/181
+    jenkins:   Verifying        : libgexiv2-0.12.3-1.el9.x86_64                       94/181
+    jenkins:   Verifying        : libglvnd-1:1.3.4-1.el9.x86_64                       95/181
+    jenkins:   Verifying        : libglvnd-egl-1:1.3.4-1.el9.x86_64                   96/181
+    jenkins:   Verifying        : libglvnd-glx-1:1.3.4-1.el9.x86_64                   97/181
+    jenkins:   Verifying        : libgsf-1.14.47-5.el9.x86_64                         98/181
+    jenkins:   Verifying        : libgxps-0.3.2-3.el9.x86_64                          99/181
+    jenkins:   Verifying        : libiptcdata-1.0.5-9.el9.x86_64                     100/181
+    jenkins:   Verifying        : libjpeg-turbo-2.0.90-6.el9.x86_64                  101/181
+    jenkins:   Verifying        : libldac-2.0.2.3-10.el9.x86_64                      102/181
+    jenkins:   Verifying        : libnotify-0.7.9-8.el9.x86_64                       103/181
+    jenkins:   Verifying        : libogg-2:1.3.4-6.el9.x86_64                        104/181
+    jenkins:   Verifying        : libosinfo-1.10.0-1.el9.x86_64                      105/181
+    jenkins:   Verifying        : libproxy-webkitgtk4-0.4.15-35.el9.x86_64           106/181
+    jenkins:   Verifying        : librsvg2-2.50.7-1.el9.x86_64                       107/181
+    jenkins:   Verifying        : libsbc-1.4-9.el9.x86_64                            108/181
+    jenkins:   Verifying        : libsndfile-1.0.31-7.el9.x86_64                     109/181
+    jenkins:   Verifying        : libsoup-2.72.0-8.el9.x86_64                        110/181
+    jenkins:   Verifying        : libstemmer-0-18.585svn.el9.x86_64                  111/181
+    jenkins:   Verifying        : libthai-0.1.28-8.el9.x86_64                        112/181
+    jenkins:   Verifying        : libtheora-1:1.1.1-31.el9.x86_64                    113/181
+    jenkins:   Verifying        : libtiff-4.4.0-7.el9.x86_64                         114/181
+    jenkins:   Verifying        : libtool-ltdl-2.4.6-45.el9.x86_64                   115/181
+    jenkins:   Verifying        : libtracker-sparql-3.1.2-3.el9.x86_64               116/181
+    jenkins:   Verifying        : libvisual-1:0.4.0-34.el9.x86_64                    117/181
+    jenkins:   Verifying        : libvorbis-1:1.3.7-5.el9.x86_64                     118/181
+    jenkins:   Verifying        : libwayland-client-1.21.0-1.el9.x86_64              119/181
+    jenkins:   Verifying        : libwayland-cursor-1.21.0-1.el9.x86_64              120/181
+    jenkins:   Verifying        : libwayland-egl-1.21.0-1.el9.x86_64                 121/181
+    jenkins:   Verifying        : libwayland-server-1.21.0-1.el9.x86_64              122/181
+    jenkins:   Verifying        : libwebp-1.2.0-3.el9.x86_64                         123/181
+    jenkins:   Verifying        : libxcb-1.13.1-9.el9.x86_64                         124/181
+    jenkins:   Verifying        : libxkbcommon-1.0.3-4.el9.x86_64                    125/181
+    jenkins:   Verifying        : libxshmfence-1.3-10.el9.x86_64                     126/181
+    jenkins:   Verifying        : libxslt-1.1.34-9.el9.x86_64                        127/181
+    jenkins:   Verifying        : llvm-libs-15.0.7-1.el9.x86_64                      128/181
+    jenkins:   Verifying        : low-memory-monitor-2.1-4.el9.x86_64                129/181
+    jenkins:   Verifying        : lua-5.4.2-4.el9.x86_64                             130/181
+    jenkins:   Verifying        : lua-posix-35.0-8.el9.x86_64                        131/181
+    jenkins:   Verifying        : mesa-libEGL-22.3.0-2.el9.x86_64                    132/181
+    jenkins:   Verifying        : mesa-libGL-22.3.0-2.el9.x86_64                     133/181
+    jenkins:   Verifying        : mesa-libgbm-22.3.0-2.el9.x86_64                    134/181
+    jenkins:   Verifying        : mesa-libglapi-22.3.0-2.el9.x86_64                  135/181
+    jenkins:   Verifying        : mesa-vulkan-drivers-22.3.0-2.el9.x86_64            136/181
+    jenkins:   Verifying        : mkfontscale-1.2.1-3.el9.x86_64                     137/181
+    jenkins:   Verifying        : nspr-4.34.0-14.el9.x86_64                          138/181
+    jenkins:   Verifying        : nss-3.79.0-14.el9.x86_64                           139/181
+    jenkins:   Verifying        : nss-softokn-3.79.0-14.el9.x86_64                   140/181
+    jenkins:   Verifying        : nss-softokn-freebl-3.79.0-14.el9.x86_64            141/181
+    jenkins:   Verifying        : nss-sysinit-3.79.0-14.el9.x86_64                   142/181
+    jenkins:   Verifying        : nss-util-3.79.0-14.el9.x86_64                      143/181
+    jenkins:   Verifying        : openjpeg2-2.4.0-7.el9.x86_64                       144/181
+    jenkins:   Verifying        : opus-1.3.1-10.el9.x86_64                           145/181
+    jenkins:   Verifying        : orc-0.4.31-6.el9.x86_64                            146/181
+    jenkins:   Verifying        : osinfo-db-20221130-1.el9.noarch                    147/181
+    jenkins:   Verifying        : osinfo-db-tools-1.10.0-1.el9.x86_64                148/181
+    jenkins:   Verifying        : ostree-libs-2022.6-3.el9.x86_64                    149/181
+    jenkins:   Verifying        : p11-kit-server-0.24.1-2.el9.x86_64                 150/181
+    jenkins:   Verifying        : pango-1.48.7-3.el9.x86_64                          151/181
+    jenkins:   Verifying        : pipewire-0.3.47-2.el9.x86_64                       152/181
+    jenkins:   Verifying        : pipewire-alsa-0.3.47-2.el9.x86_64                  153/181
+    jenkins:   Verifying        : pipewire-jack-audio-connection-kit-0.3.47-2.el9.   154/181
+    jenkins:   Verifying        : pipewire-libs-0.3.47-2.el9.x86_64                  155/181
+    jenkins:   Verifying        : pipewire-pulseaudio-0.3.47-2.el9.x86_64            156/181
+    jenkins:   Verifying        : pixman-0.40.0-5.el9.x86_64                         157/181
+    jenkins:   Verifying        : poppler-21.01.0-14.el9.x86_64                      158/181
+    jenkins:   Verifying        : poppler-data-0.4.9-9.el9.noarch                    159/181
+    jenkins:   Verifying        : poppler-glib-21.01.0-14.el9.x86_64                 160/181
+    jenkins:   Verifying        : pulseaudio-libs-15.0-2.el9.x86_64                  161/181
+    jenkins:   Verifying        : pulseaudio-utils-15.0-2.el9.x86_64                 162/181
+    jenkins:   Verifying        : rtkit-0.11-28.el9.x86_64                           163/181
+    jenkins:   Verifying        : sound-theme-freedesktop-0.8-17.el9.noarch          164/181
+    jenkins:   Verifying        : totem-pl-parser-3.26.6-2.el9.x86_64                165/181
+    jenkins:   Verifying        : tracker-3.1.2-3.el9.x86_64                         166/181
+    jenkins:   Verifying        : tracker-miners-3.1.2-3.el9.x86_64                  167/181
+    jenkins:   Verifying        : ttmkfdir-3.0.9-65.el9.x86_64                       168/181
+    jenkins:   Verifying        : tzdata-java-2022g-2.el9.noarch                     169/181
+    jenkins:   Verifying        : upower-0.99.11-11.el9.x86_64                       170/181
+    jenkins:   Verifying        : vulkan-loader-1.3.239.0-1.el9.x86_64               171/181
+    jenkins:   Verifying        : webkit2gtk3-jsc-2.38.5-1.el9.x86_64                172/181
+    jenkins:   Verifying        : webrtc-audio-processing-0.3.1-8.el9.x86_64         173/181
+    jenkins:   Verifying        : wireplumber-0.4.8-1.el9.x86_64                     174/181
+    jenkins:   Verifying        : wireplumber-libs-0.4.8-1.el9.x86_64                175/181
+    jenkins:   Verifying        : xdg-dbus-proxy-0.1.3-1.el9.x86_64                  176/181
+    jenkins:   Verifying        : xdg-desktop-portal-1.12.4-1.el9.x86_64             177/181
+    jenkins:   Verifying        : xdg-desktop-portal-gtk-1.12.0-3.el9.x86_64         178/181
+    jenkins:   Verifying        : xkeyboard-config-2.33-2.el9.noarch                 179/181
+    jenkins:   Verifying        : xml-common-0.6.3-58.el9.noarch                     180/181
+    jenkins:   Verifying        : xorg-x11-fonts-Type1-7.5-33.el9.noarch             181/181
+    jenkins:
+    jenkins: Installed:
+    jenkins:   ModemManager-glib-1.20.2-1.el9.x86_64
+    jenkins:   abattis-cantarell-fonts-0.301-4.el9.noarch
+    jenkins:   adobe-source-code-pro-fonts-2.030.1.050-12.el9.1.noarch
+    jenkins:   adwaita-cursor-theme-40.1.1-3.el9.noarch
+    jenkins:   adwaita-icon-theme-40.1.1-3.el9.noarch
+    jenkins:   alsa-lib-1.2.8-3.el9.x86_64
+    jenkins:   at-spi2-atk-2.38.0-4.el9.x86_64
+    jenkins:   at-spi2-core-2.40.3-1.el9.x86_64
+    jenkins:   atk-2.36.0-5.el9.x86_64
+    jenkins:   avahi-glib-0.8-12.el9.x86_64
+    jenkins:   avahi-libs-0.8-12.el9.x86_64
+    jenkins:   bluez-libs-5.56-6.el9.x86_64
+    jenkins:   bubblewrap-0.4.1-6.el9.x86_64
+    jenkins:   cairo-1.17.4-7.el9.x86_64
+    jenkins:   cairo-gobject-1.17.4-7.el9.x86_64
+    jenkins:   colord-libs-1.4.5-4.el9.x86_64
+    jenkins:   copy-jdk-configs-4.0-3.el9.noarch
+    jenkins:   cups-libs-1:2.3.3op2-16.el9.x86_64
+    jenkins:   dconf-0.40.0-6.el9.x86_64
+    jenkins:   exempi-2.6.0-0.2.20211007gite23c213.el9.x86_64
+    jenkins:   exiv2-0.27.5-2.el9.x86_64
+    jenkins:   exiv2-libs-0.27.5-2.el9.x86_64
+    jenkins:   fdk-aac-free-2.0.0-8.el9.x86_64
+    jenkins:   flac-libs-1.3.3-10.el9.x86_64
+    jenkins:   flatpak-1.12.7-2.el9.x86_64
+    jenkins:   flatpak-selinux-1.12.7-2.el9.noarch
+    jenkins:   flatpak-session-helper-1.12.7-2.el9.x86_64
+    jenkins:   fontconfig-2.14.0-2.el9.x86_64
+    jenkins:   freetype-2.10.4-9.el9.x86_64
+    jenkins:   fribidi-1.0.10-6.el9.2.x86_64
+    jenkins:   fuse-2.9.9-15.el9.x86_64
+    jenkins:   fuse-common-3.10.2-5.el9.x86_64
+    jenkins:   gdk-pixbuf2-2.42.6-3.el9.x86_64
+    jenkins:   gdk-pixbuf2-modules-2.42.6-3.el9.x86_64
+    jenkins:   geoclue2-2.6.0-7.el9.x86_64
+    jenkins:   giflib-5.2.1-9.el9.x86_64
+    jenkins:   glib-networking-2.68.3-3.el9.x86_64
+    jenkins:   graphene-1.10.6-2.el9.x86_64
+    jenkins:   graphite2-1.3.14-9.el9.x86_64
+    jenkins:   gsettings-desktop-schemas-40.0-6.el9.x86_64
+    jenkins:   gsm-1.0.19-6.el9.x86_64
+    jenkins:   gstreamer1-1.18.4-4.el9.x86_64
+    jenkins:   gstreamer1-plugins-base-1.18.4-5.el9.x86_64
+    jenkins:   gtk-update-icon-cache-3.24.31-2.el9.x86_64
+    jenkins:   gtk3-3.24.31-2.el9.x86_64
+    jenkins:   harfbuzz-2.7.4-8.el9.x86_64
+    jenkins:   hicolor-icon-theme-0.17-13.el9.noarch
+    jenkins:   iso-codes-4.6.0-3.el9.noarch
+    jenkins:   java-17-openjdk-1:17.0.6.0.9-0.3.ea.el9.x86_64
+    jenkins:   java-17-openjdk-headless-1:17.0.6.0.9-0.3.ea.el9.x86_64
+    jenkins:   javapackages-filesystem-6.0.0-4.el9.noarch
+    jenkins:   jbigkit-libs-2.1-23.el9.x86_64
+    jenkins:   json-glib-1.6.6-1.el9.x86_64
+    jenkins:   lcms2-2.12-3.el9.x86_64
+    jenkins:   libX11-1.7.0-7.el9.x86_64
+    jenkins:   libX11-common-1.7.0-7.el9.noarch
+    jenkins:   libX11-xcb-1.7.0-7.el9.x86_64
+    jenkins:   libXau-1.0.9-8.el9.x86_64
+    jenkins:   libXcomposite-0.4.5-7.el9.x86_64
+    jenkins:   libXcursor-1.2.0-7.el9.x86_64
+    jenkins:   libXdamage-1.1.5-7.el9.x86_64
+    jenkins:   libXext-1.3.4-8.el9.x86_64
+    jenkins:   libXfixes-5.0.3-16.el9.x86_64
+    jenkins:   libXft-2.3.3-8.el9.x86_64
+    jenkins:   libXi-1.7.10-8.el9.x86_64
+    jenkins:   libXinerama-1.1.4-10.el9.x86_64
+    jenkins:   libXrandr-1.5.2-8.el9.x86_64
+    jenkins:   libXrender-0.9.10-16.el9.x86_64
+    jenkins:   libXtst-1.2.3-16.el9.x86_64
+    jenkins:   libXv-1.0.11-16.el9.x86_64
+    jenkins:   libXxf86vm-1.1.4-18.el9.x86_64
+    jenkins:   libappstream-glib-0.7.18-4.el9.x86_64
+    jenkins:   libasyncns-0.8-22.el9.x86_64
+    jenkins:   libatomic-11.3.1-4.3.el9.x86_64
+    jenkins:   libcanberra-0.30-26.el9.x86_64
+    jenkins:   libcanberra-gtk3-0.30-26.el9.x86_64
+    jenkins:   libdatrie-0.2.13-4.el9.x86_64
+    jenkins:   libdrm-2.4.114-1.el9.x86_64
+    jenkins:   libepoxy-1.5.5-4.el9.x86_64
+    jenkins:   libexif-0.6.22-6.el9.x86_64
+    jenkins:   libfontenc-1.1.3-17.el9.x86_64
+    jenkins:   libgexiv2-0.12.3-1.el9.x86_64
+    jenkins:   libglvnd-1:1.3.4-1.el9.x86_64
+    jenkins:   libglvnd-egl-1:1.3.4-1.el9.x86_64
+    jenkins:   libglvnd-glx-1:1.3.4-1.el9.x86_64
+    jenkins:   libgsf-1.14.47-5.el9.x86_64
+    jenkins:   libgudev-237-1.el9.x86_64
+    jenkins:   libgusb-0.3.6-3.el9.x86_64
+    jenkins:   libgxps-0.3.2-3.el9.x86_64
+    jenkins:   libicu-67.1-9.el9.x86_64
+    jenkins:   libiptcdata-1.0.5-9.el9.x86_64
+    jenkins:   libjpeg-turbo-2.0.90-6.el9.x86_64
+    jenkins:   libldac-2.0.2.3-10.el9.x86_64
+    jenkins:   libnotify-0.7.9-8.el9.x86_64
+    jenkins:   libogg-2:1.3.4-6.el9.x86_64
+    jenkins:   libosinfo-1.10.0-1.el9.x86_64
+    jenkins:   libpciaccess-0.16-6.el9.x86_64
+    jenkins:   libpng-2:1.6.37-12.el9.x86_64
+    jenkins:   libproxy-0.4.15-35.el9.x86_64
+    jenkins:   libproxy-webkitgtk4-0.4.15-35.el9.x86_64
+    jenkins:   librsvg2-2.50.7-1.el9.x86_64
+    jenkins:   libsbc-1.4-9.el9.x86_64
+    jenkins:   libsndfile-1.0.31-7.el9.x86_64
+    jenkins:   libsoup-2.72.0-8.el9.x86_64
+    jenkins:   libstemmer-0-18.585svn.el9.x86_64
+    jenkins:   libthai-0.1.28-8.el9.x86_64
+    jenkins:   libtheora-1:1.1.1-31.el9.x86_64
+    jenkins:   libtiff-4.4.0-7.el9.x86_64
+    jenkins:   libtool-ltdl-2.4.6-45.el9.x86_64
+    jenkins:   libtracker-sparql-3.1.2-3.el9.x86_64
+    jenkins:   libusbx-1.0.26-1.el9.x86_64
+    jenkins:   libvisual-1:0.4.0-34.el9.x86_64
+    jenkins:   libvorbis-1:1.3.7-5.el9.x86_64
+    jenkins:   libwayland-client-1.21.0-1.el9.x86_64
+    jenkins:   libwayland-cursor-1.21.0-1.el9.x86_64
+    jenkins:   libwayland-egl-1.21.0-1.el9.x86_64
+    jenkins:   libwayland-server-1.21.0-1.el9.x86_64
+    jenkins:   libwebp-1.2.0-3.el9.x86_64
+    jenkins:   libxcb-1.13.1-9.el9.x86_64
+    jenkins:   libxkbcommon-1.0.3-4.el9.x86_64
+    jenkins:   libxshmfence-1.3-10.el9.x86_64
+    jenkins:   libxslt-1.1.34-9.el9.x86_64
+    jenkins:   lksctp-tools-1.0.19-2.el9.x86_64
+    jenkins:   llvm-libs-15.0.7-1.el9.x86_64
+    jenkins:   low-memory-monitor-2.1-4.el9.x86_64
+    jenkins:   lua-5.4.2-4.el9.x86_64
+    jenkins:   lua-posix-35.0-8.el9.x86_64
+    jenkins:   mesa-libEGL-22.3.0-2.el9.x86_64
+    jenkins:   mesa-libGL-22.3.0-2.el9.x86_64
+    jenkins:   mesa-libgbm-22.3.0-2.el9.x86_64
+    jenkins:   mesa-libglapi-22.3.0-2.el9.x86_64
+    jenkins:   mesa-vulkan-drivers-22.3.0-2.el9.x86_64
+    jenkins:   mkfontscale-1.2.1-3.el9.x86_64
+    jenkins:   nspr-4.34.0-14.el9.x86_64
+    jenkins:   nss-3.79.0-14.el9.x86_64
+    jenkins:   nss-softokn-3.79.0-14.el9.x86_64
+    jenkins:   nss-softokn-freebl-3.79.0-14.el9.x86_64
+    jenkins:   nss-sysinit-3.79.0-14.el9.x86_64
+    jenkins:   nss-util-3.79.0-14.el9.x86_64
+    jenkins:   openjpeg2-2.4.0-7.el9.x86_64
+    jenkins:   opus-1.3.1-10.el9.x86_64
+    jenkins:   orc-0.4.31-6.el9.x86_64
+    jenkins:   osinfo-db-20221130-1.el9.noarch
+    jenkins:   osinfo-db-tools-1.10.0-1.el9.x86_64
+    jenkins:   ostree-libs-2022.6-3.el9.x86_64
+    jenkins:   p11-kit-server-0.24.1-2.el9.x86_64
+    jenkins:   pango-1.48.7-3.el9.x86_64
+    jenkins:   pipewire-0.3.47-2.el9.x86_64
+    jenkins:   pipewire-alsa-0.3.47-2.el9.x86_64
+    jenkins:   pipewire-jack-audio-connection-kit-0.3.47-2.el9.x86_64
+    jenkins:   pipewire-libs-0.3.47-2.el9.x86_64
+    jenkins:   pipewire-pulseaudio-0.3.47-2.el9.x86_64
+    jenkins:   pixman-0.40.0-5.el9.x86_64
+    jenkins:   polkit-0.117-11.el9.x86_64
+    jenkins:   polkit-libs-0.117-11.el9.x86_64
+    jenkins:   polkit-pkla-compat-0.1-21.el9.x86_64
+    jenkins:   poppler-21.01.0-14.el9.x86_64
+    jenkins:   poppler-data-0.4.9-9.el9.noarch
+    jenkins:   poppler-glib-21.01.0-14.el9.x86_64
+    jenkins:   pulseaudio-libs-15.0-2.el9.x86_64
+    jenkins:   pulseaudio-utils-15.0-2.el9.x86_64
+    jenkins:   rtkit-0.11-28.el9.x86_64
+    jenkins:   shared-mime-info-2.1-5.el9.x86_64
+    jenkins:   sound-theme-freedesktop-0.8-17.el9.noarch
+    jenkins:   totem-pl-parser-3.26.6-2.el9.x86_64
+    jenkins:   tracker-3.1.2-3.el9.x86_64
+    jenkins:   tracker-miners-3.1.2-3.el9.x86_64
+    jenkins:   ttmkfdir-3.0.9-65.el9.x86_64
+    jenkins:   tzdata-java-2022g-2.el9.noarch
+    jenkins:   upower-0.99.11-11.el9.x86_64
+    jenkins:   vulkan-loader-1.3.239.0-1.el9.x86_64
+    jenkins:   webkit2gtk3-jsc-2.38.5-1.el9.x86_64
+    jenkins:   webrtc-audio-processing-0.3.1-8.el9.x86_64
+    jenkins:   wireplumber-0.4.8-1.el9.x86_64
+    jenkins:   wireplumber-libs-0.4.8-1.el9.x86_64
+    jenkins:   xdg-dbus-proxy-0.1.3-1.el9.x86_64
+    jenkins:   xdg-desktop-portal-1.12.4-1.el9.x86_64
+    jenkins:   xdg-desktop-portal-gtk-1.12.0-3.el9.x86_64
+    jenkins:   xkeyboard-config-2.33-2.el9.noarch
+    jenkins:   xml-common-0.6.3-58.el9.noarch
+    jenkins:   xorg-x11-fonts-Type1-7.5-33.el9.noarch
+    jenkins:
+    jenkins: Complete!
+    jenkins: * Installing Additional Packages ...
+    jenkins: Last metadata expiration check: 0:05:25 ago on Wed 01 Mar 2023 09:40:31 AM EET.
+    jenkins: Package tree-1.8.0-10.el9.x86_64 is already installed.
+    jenkins: Dependencies resolved.
+    jenkins: ================================================================================
+    jenkins:  Package           Architecture   Version               Repository         Size
+    jenkins: ================================================================================
+    jenkins: Installing:
+    jenkins:  jq                x86_64         1.6-14.el9            appstream         187 k
+    jenkins: Installing dependencies:
+    jenkins:  oniguruma         x86_64         6.9.6-1.el9.5         appstream         218 k
+    jenkins:
+    jenkins: Transaction Summary
+    jenkins: ================================================================================
+    jenkins: Install  2 Packages
+    jenkins:
+    jenkins: Total download size: 405 k
+    jenkins: Installed size: 1.1 M
+    jenkins: Downloading Packages:
+    jenkins: (1/2): jq-1.6-14.el9.x86_64.rpm                 389 kB/s | 187 kB     00:00
+    jenkins: (2/2): oniguruma-6.9.6-1.el9.5.x86_64.rpm       430 kB/s | 218 kB     00:00
+    jenkins: --------------------------------------------------------------------------------
+    jenkins: Total                                           308 kB/s | 405 kB     00:01
+    jenkins: Running transaction check
+    jenkins: Transaction check succeeded.
+    jenkins: Running transaction test
+    jenkins: Transaction test succeeded.
+    jenkins: Running transaction
+    jenkins:   Preparing        :                                                        1/1
+    jenkins:   Installing       : oniguruma-6.9.6-1.el9.5.x86_64                         1/2
+    jenkins:   Installing       : jq-1.6-14.el9.x86_64                                   2/2
+    jenkins:   Running scriptlet: jq-1.6-14.el9.x86_64                                   2/2
+    jenkins:   Verifying        : jq-1.6-14.el9.x86_64                                   1/2
+    jenkins:   Verifying        : oniguruma-6.9.6-1.el9.5.x86_64                         2/2
+    jenkins:
+    jenkins: Installed:
+    jenkins:   jq-1.6-14.el9.x86_64              oniguruma-6.9.6-1.el9.5.x86_64
+    jenkins:
+    jenkins: Complete!
+    jenkins: uavc:  op=load_policy lsm=selinux seqno=2 res=1
+==> jenkins: Running provisioner: shell...
+    jenkins: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230301-6924-ztbgi0.sh
+    jenkins: * Installing Git ...
+    jenkins: Last metadata expiration check: 0:05:49 ago on Wed 01 Mar 2023 09:40:31 AM EET.
+    jenkins: Dependencies resolved.
+    jenkins: ================================================================================
+    jenkins:  Package               Arch        Version                 Repository      Size
+    jenkins: ================================================================================
+    jenkins: Installing:
+    jenkins:  git                   x86_64      2.39.1-1.el9            appstream       63 k
+    jenkins: Installing dependencies:
+    jenkins:  emacs-filesystem      noarch      1:27.2-8.el9            appstream      8.8 k
+    jenkins:  git-core              x86_64      2.39.1-1.el9            appstream      4.2 M
+    jenkins:  git-core-doc          noarch      2.39.1-1.el9            appstream      2.9 M
+    jenkins:  perl-DynaLoader       x86_64      1.47-480.el9            appstream       27 k
+    jenkins:  perl-Error            noarch      1:0.17029-7.el9         appstream       42 k
+    jenkins:  perl-File-Find        noarch      1.37-480.el9            appstream       27 k
+    jenkins:  perl-Git              noarch      2.39.1-1.el9            appstream       39 k
+    jenkins:  perl-TermReadKey      x86_64      2.38-11.el9             appstream       37 k
+    jenkins:  perl-lib              x86_64      0.65-480.el9            appstream       16 k
+    jenkins:
+    jenkins: Transaction Summary
+    jenkins: ================================================================================
+    jenkins: Install  10 Packages
+    jenkins:
+    jenkins: Total download size: 7.3 M
+    jenkins: Installed size: 36 M
+    jenkins: Downloading Packages:
+    jenkins: (1/10): git-2.39.1-1.el9.x86_64.rpm              71 kB/s |  63 kB     00:00
+    jenkins: (2/10): emacs-filesystem-27.2-8.el9.noarch.rpm  9.2 kB/s | 8.8 kB     00:00
+    jenkins: (3/10): perl-DynaLoader-1.47-480.el9.x86_64.rpm  49 kB/s |  27 kB     00:00
+    jenkins: (4/10): git-core-doc-2.39.1-1.el9.noarch.rpm    2.1 MB/s | 2.9 MB     00:01
+    jenkins: (5/10): perl-Error-0.17029-7.el9.noarch.rpm      53 kB/s |  42 kB     00:00
+    jenkins: (6/10): perl-File-Find-1.37-480.el9.noarch.rpm  193 kB/s |  27 kB     00:00
+    jenkins: (7/10): perl-Git-2.39.1-1.el9.noarch.rpm        201 kB/s |  39 kB     00:00
+    jenkins: (8/10): perl-TermReadKey-2.38-11.el9.x86_64.rpm 367 kB/s |  37 kB     00:00
+    jenkins: (9/10): perl-lib-0.65-480.el9.x86_64.rpm        105 kB/s |  16 kB     00:00
+    jenkins: (10/10): git-core-2.39.1-1.el9.x86_64.rpm       1.5 MB/s | 4.2 MB     00:02
+    jenkins: --------------------------------------------------------------------------------
+    jenkins: Total                                           2.2 MB/s | 7.3 MB     00:03
+    jenkins: Running transaction check
+    jenkins: Transaction check succeeded.
+    jenkins: Running transaction test
+    jenkins: Transaction test succeeded.
+    jenkins: Running transaction
+    jenkins:   Preparing        :                                                        1/1
+    jenkins:   Installing       : git-core-2.39.1-1.el9.x86_64                          1/10
+    jenkins:   Installing       : git-core-doc-2.39.1-1.el9.noarch                      2/10
+    jenkins:   Installing       : perl-lib-0.65-480.el9.x86_64                          3/10
+    jenkins:   Installing       : perl-File-Find-1.37-480.el9.noarch                    4/10
+    jenkins:   Installing       : perl-Error-1:0.17029-7.el9.noarch                     5/10
+    jenkins:   Installing       : perl-DynaLoader-1.47-480.el9.x86_64                   6/10
+    jenkins:   Installing       : perl-TermReadKey-2.38-11.el9.x86_64                   7/10
+    jenkins:   Installing       : emacs-filesystem-1:27.2-8.el9.noarch                  8/10
+    jenkins:   Installing       : perl-Git-2.39.1-1.el9.noarch                          9/10
+    jenkins:   Installing       : git-2.39.1-1.el9.x86_64                              10/10
+    jenkins:   Running scriptlet: git-2.39.1-1.el9.x86_64                              10/10
+    jenkins:   Verifying        : emacs-filesystem-1:27.2-8.el9.noarch                  1/10
+    jenkins:   Verifying        : git-2.39.1-1.el9.x86_64                               2/10
+    jenkins:   Verifying        : git-core-2.39.1-1.el9.x86_64                          3/10
+    jenkins:   Verifying        : git-core-doc-2.39.1-1.el9.noarch                      4/10
+    jenkins:   Verifying        : perl-DynaLoader-1.47-480.el9.x86_64                   5/10
+    jenkins:   Verifying        : perl-Error-1:0.17029-7.el9.noarch                     6/10
+    jenkins:   Verifying        : perl-File-Find-1.37-480.el9.noarch                    7/10
+    jenkins:   Verifying        : perl-Git-2.39.1-1.el9.noarch                          8/10
+    jenkins:   Verifying        : perl-TermReadKey-2.38-11.el9.x86_64                   9/10
+    jenkins:   Verifying        : perl-lib-0.65-480.el9.x86_64                         10/10
+    jenkins:
+    jenkins: Installed:
+    jenkins:   emacs-filesystem-1:27.2-8.el9.noarch     git-2.39.1-1.el9.x86_64
+    jenkins:   git-core-2.39.1-1.el9.x86_64             git-core-doc-2.39.1-1.el9.noarch
+    jenkins:   perl-DynaLoader-1.47-480.el9.x86_64      perl-Error-1:0.17029-7.el9.noarch
+    jenkins:   perl-File-Find-1.37-480.el9.noarch       perl-Git-2.39.1-1.el9.noarch
+    jenkins:   perl-TermReadKey-2.38-11.el9.x86_64      perl-lib-0.65-480.el9.x86_64
+    jenkins:
+    jenkins: Complete!
+==> jenkins: Running provisioner: shell...
+    jenkins: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230301-6924-ioifu9.sh
+    jenkins: * Installing Jenkins
+    jenkins: --2023-03-01 09:47:00--  https://pkg.jenkins.io/redhat/jenkins.repo
+    jenkins: Resolving pkg.jenkins.io (pkg.jenkins.io)... 151.101.2.133, 151.101.66.133, 151.101.130.133, ...
+    jenkins: Connecting to pkg.jenkins.io (pkg.jenkins.io)|151.101.2.133|:443... connected.
+    jenkins: HTTP request sent, awaiting response... 200 OK
+    jenkins: Length: 71
+    jenkins: Saving to: ‘/etc/yum.repos.d/jenkins.repo’
+    jenkins:
+    jenkins:      0K                                                       100% 2.71M=0s
+    jenkins:
+    jenkins: 2023-03-01 09:47:02 (2.71 MB/s) - ‘/etc/yum.repos.d/jenkins.repo’ saved [71/71]
+    jenkins:
+    jenkins: CentOS Stream 9 - BaseOS                        7.1 kB/s | 8.9 kB     00:01
+    jenkins: CentOS Stream 9 - AppStream                      13 kB/s | 9.0 kB     00:00
+    jenkins: CentOS Stream 9 - Extras packages               8.0 kB/s | 9.7 kB     00:01
+    jenkins: Jenkins                                          57 kB/s | 106 kB     00:01
+    jenkins: Metadata cache created.
+    jenkins: Last metadata expiration check: 0:00:05 ago on Wed 01 Mar 2023 09:47:12 AM EET.
+    jenkins: Dependencies resolved.
+    jenkins: ================================================================================
+    jenkins:  Package           Architecture     Version             Repository         Size
+    jenkins: ================================================================================
+    jenkins: Installing:
+    jenkins:  jenkins           noarch           2.393-1.1           jenkins            94 M
+    jenkins:
+    jenkins: Transaction Summary
+    jenkins: ================================================================================
+    jenkins: Install  1 Package
+    jenkins:
+    jenkins: Total download size: 94 M
+    jenkins: Installed size: 94 M
+    jenkins: Downloading Packages:
+    jenkins: jenkins-2.393-1.1.noarch.rpm                    4.7 MB/s |  94 MB     00:19
+    jenkins: --------------------------------------------------------------------------------
+    jenkins: Total                                           4.7 MB/s |  94 MB     00:20
+    jenkins: Running transaction check
+    jenkins: Transaction check succeeded.
+    jenkins: Running transaction test
+    jenkins: Transaction test succeeded.
+    jenkins: Running transaction
+    jenkins:   Preparing        :                                                        1/1
+    jenkins:   Running scriptlet: jenkins-2.393-1.1.noarch                               1/1
+    jenkins:   Installing       : jenkins-2.393-1.1.noarch                               1/1
+    jenkins:   Running scriptlet: jenkins-2.393-1.1.noarch                               1/1
+    jenkins:   Verifying        : jenkins-2.393-1.1.noarch                               1/1
+    jenkins:
+    jenkins: Installed:
+    jenkins:   jenkins-2.393-1.1.noarch
+    jenkins:
+    jenkins: Complete!
+    jenkins: * Adding jenkins user to sudoers ...
+    jenkins: jenkins ALL=(ALL)    NOPASSWD:ALL
+    jenkins: * Edit Jenkins Service timeout for slower machines...
+    jenkins: * Jenkins user settings configuration ...
+    jenkins: New password: BAD PASSWORD: The password fails the dictionary check - it is based on a dictionary word
+    jenkins: Changing password for user jenkins.
+    jenkins: passwd: all authentication tokens updated successfully.
+    jenkins: Generating public/private ecdsa key pair.
+    jenkins: Retype new password: /bin/ssh-copy-id: ERROR: No identities found
+    jenkins: Enter file in which to save the key (/root/.ssh/id_ecdsa): * Start and enable Jenkins ...
+    jenkins: Created symlink /etc/systemd/system/multi-user.target.wants/jenkins.service → /usr/lib/systemd/system/jenkins.service.
+==> jenkins: Running provisioner: shell...
+    jenkins: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230301-6924-hvmsw9.sh
+    jenkins: * Adding Docker repository ...
+    jenkins: Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+    jenkins: * Installing Docker ...
+    jenkins: Docker CE Stable - x86_64                        14 kB/s |  19 kB     00:01
+    jenkins: Last metadata expiration check: 0:00:01 ago on Wed 01 Mar 2023 09:50:52 AM EET.
+    jenkins: Dependencies resolved.
+    jenkins: ================================================================================
+    jenkins:  Package                    Arch    Version             Repository         Size
+    jenkins: ================================================================================
+    jenkins: Installing:
+    jenkins:  containerd.io              x86_64  1.6.18-3.1.el9      docker-ce-stable   32 M
+    jenkins:  docker-ce                  x86_64  3:23.0.1-1.el9      docker-ce-stable   23 M
+    jenkins:  docker-ce-cli              x86_64  1:23.0.1-1.el9      docker-ce-stable  7.0 M
+    jenkins: Installing dependencies:
+    jenkins:  container-selinux          noarch  3:2.193.0-1.el9     appstream          49 k
+    jenkins:  docker-ce-rootless-extras  x86_64  23.0.1-1.el9        docker-ce-stable  3.8 M
+    jenkins:  fuse-overlayfs             x86_64  1.10-2.el9          appstream          72 k
+    jenkins:  fuse3                      x86_64  3.10.2-5.el9        appstream          54 k
+    jenkins:  fuse3-libs                 x86_64  3.10.2-5.el9        appstream          93 k
+    jenkins:  libslirp                   x86_64  4.4.0-4.el9         appstream          69 k
+    jenkins:  slirp4netns                x86_64  1.2.0-3.el9         appstream          46 k
+    jenkins: Installing weak dependencies:
+    jenkins:  docker-buildx-plugin       x86_64  0.10.2-1.el9        docker-ce-stable   12 M
+    jenkins:  docker-compose-plugin      x86_64  2.16.0-1.el9        docker-ce-stable   11 M
+    jenkins:  docker-scan-plugin         x86_64  0.23.0-3.el9        docker-ce-stable  3.8 M
+    jenkins:
+    jenkins: Transaction Summary
+    jenkins: ================================================================================
+    jenkins: Install  13 Packages
+    jenkins:
+    jenkins: Total download size: 93 M
+    jenkins: Installed size: 362 M
+    jenkins: Downloading Packages:
+    jenkins: (1/13): container-selinux-2.193.0-1.el9.noarch. 209 kB/s |  49 kB     00:00
+    jenkins: (2/13): fuse3-3.10.2-5.el9.x86_64.rpm           225 kB/s |  54 kB     00:00
+    jenkins: (3/13): fuse-overlayfs-1.10-2.el9.x86_64.rpm    258 kB/s |  72 kB     00:00
+    jenkins: (4/13): fuse3-libs-3.10.2-5.el9.x86_64.rpm      673 kB/s |  93 kB     00:00
+    jenkins: (5/13): libslirp-4.4.0-4.el9.x86_64.rpm         289 kB/s |  69 kB     00:00
+    jenkins: (6/13): slirp4netns-1.2.0-3.el9.x86_64.rpm      109 kB/s |  46 kB     00:00
+    jenkins: (7/13): containerd.io-1.6.18-3.1.el9.x86_64.rpm 2.8 MB/s |  32 MB     00:11
+    jenkins: (8/13): docker-buildx-plugin-0.10.2-1.el9.x86_6 956 kB/s |  12 MB     00:12
+    jenkins: (9/13): docker-ce-cli-23.0.1-1.el9.x86_64.rpm   2.1 MB/s | 7.0 MB     00:03
+    jenkins: (10/13): docker-ce-23.0.1-1.el9.x86_64.rpm      1.4 MB/s |  23 MB     00:15
+    jenkins: (11/13): docker-ce-rootless-extras-23.0.1-1.el9 957 kB/s | 3.8 MB     00:04
+    jenkins: (12/13): docker-scan-plugin-0.23.0-3.el9.x86_64 1.6 MB/s | 3.8 MB     00:02
+    jenkins: (13/13): docker-compose-plugin-2.16.0-1.el9.x86 2.4 MB/s |  11 MB     00:04
+    jenkins: --------------------------------------------------------------------------------
+    jenkins: Total                                           4.5 MB/s |  93 MB     00:20
+    jenkins: Docker CE Stable - x86_64                       5.5 kB/s | 1.6 kB     00:00
+    jenkins: Importing GPG key 0x621E9F35:
+    jenkins:  Userid     : "Docker Release (CE rpm) <docker@docker.com>"
+    jenkins:  Fingerprint: 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35
+    jenkins:  From       : https://download.docker.com/linux/centos/gpg
+    jenkins: Key imported successfully
+    jenkins: Running transaction check
+    jenkins: Transaction check succeeded.
+    jenkins: Running transaction test
+    jenkins: Transaction test succeeded.
+    jenkins: Running transaction
+    jenkins:   Preparing        :                                                        1/1
+    jenkins:   Installing       : docker-scan-plugin-0.23.0-3.el9.x86_64                1/13
+    jenkins:   Running scriptlet: docker-scan-plugin-0.23.0-3.el9.x86_64                1/13
+    jenkins:   Installing       : docker-compose-plugin-2.16.0-1.el9.x86_64             2/13
+    jenkins:   Running scriptlet: docker-compose-plugin-2.16.0-1.el9.x86_64             2/13
+    jenkins:   Installing       : fuse3-libs-3.10.2-5.el9.x86_64                        3/13
+    jenkins:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch              4/13
+    jenkins:   Installing       : container-selinux-3:2.193.0-1.el9.noarch              4/13
+    jenkins:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch              4/13
+    jenkins: Failed to resolve allow statement at /var/lib/selinux/targeted/tmp/modules/200/container/cil:1246
+    jenkins: Failed to resolve AST
+    jenkins: /usr/sbin/semodule:  Failed!
+    jenkins:
+    jenkins:   Installing       : containerd.io-1.6.18-3.1.el9.x86_64                   5/13
+    jenkins:   Running scriptlet: containerd.io-1.6.18-3.1.el9.x86_64                   5/13
+    jenkins:   Installing       : fuse3-3.10.2-5.el9.x86_64                             6/13
+    jenkins:   Installing       : fuse-overlayfs-1.10-2.el9.x86_64                      7/13
+    jenkins:   Running scriptlet: fuse-overlayfs-1.10-2.el9.x86_64                      7/13
+    jenkins:   Installing       : docker-buildx-plugin-0.10.2-1.el9.x86_64              8/13
+    jenkins:   Running scriptlet: docker-buildx-plugin-0.10.2-1.el9.x86_64              8/13
+    jenkins:   Installing       : docker-ce-cli-1:23.0.1-1.el9.x86_64                   9/13
+    jenkins:   Running scriptlet: docker-ce-cli-1:23.0.1-1.el9.x86_64                   9/13
+    jenkins:   Installing       : libslirp-4.4.0-4.el9.x86_64                          10/13
+    jenkins:   Installing       : slirp4netns-1.2.0-3.el9.x86_64                       11/13
+    jenkins:   Installing       : docker-ce-rootless-extras-23.0.1-1.el9.x86_64        12/13
+    jenkins:   Running scriptlet: docker-ce-rootless-extras-23.0.1-1.el9.x86_64        12/13
+    jenkins:   Installing       : docker-ce-3:23.0.1-1.el9.x86_64                      13/13
+    jenkins:   Running scriptlet: docker-ce-3:23.0.1-1.el9.x86_64                      13/13
+    jenkins:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch             13/13
+    jenkins:   Running scriptlet: docker-ce-3:23.0.1-1.el9.x86_64                      13/13
+    jenkins:   Verifying        : container-selinux-3:2.193.0-1.el9.noarch              1/13
+    jenkins:   Verifying        : fuse-overlayfs-1.10-2.el9.x86_64                      2/13
+    jenkins:   Verifying        : fuse3-3.10.2-5.el9.x86_64                             3/13
+    jenkins:   Verifying        : fuse3-libs-3.10.2-5.el9.x86_64                        4/13
+    jenkins:   Verifying        : libslirp-4.4.0-4.el9.x86_64                           5/13
+    jenkins:   Verifying        : slirp4netns-1.2.0-3.el9.x86_64                        6/13
+    jenkins:   Verifying        : containerd.io-1.6.18-3.1.el9.x86_64                   7/13
+    jenkins:   Verifying        : docker-buildx-plugin-0.10.2-1.el9.x86_64              8/13
+    jenkins:   Verifying        : docker-ce-3:23.0.1-1.el9.x86_64                       9/13
+    jenkins:   Verifying        : docker-ce-cli-1:23.0.1-1.el9.x86_64                  10/13
+    jenkins:   Verifying        : docker-ce-rootless-extras-23.0.1-1.el9.x86_64        11/13
+    jenkins:   Verifying        : docker-compose-plugin-2.16.0-1.el9.x86_64            12/13
+    jenkins:   Verifying        : docker-scan-plugin-0.23.0-3.el9.x86_64               13/13
+    jenkins:
+    jenkins: Installed:
+    jenkins:   container-selinux-3:2.193.0-1.el9.noarch
+    jenkins:   containerd.io-1.6.18-3.1.el9.x86_64
+    jenkins:   docker-buildx-plugin-0.10.2-1.el9.x86_64
+    jenkins:   docker-ce-3:23.0.1-1.el9.x86_64
+    jenkins:   docker-ce-cli-1:23.0.1-1.el9.x86_64
+    jenkins:   docker-ce-rootless-extras-23.0.1-1.el9.x86_64
+    jenkins:   docker-compose-plugin-2.16.0-1.el9.x86_64
+    jenkins:   docker-scan-plugin-0.23.0-3.el9.x86_64
+    jenkins:   fuse-overlayfs-1.10-2.el9.x86_64
+    jenkins:   fuse3-3.10.2-5.el9.x86_64
+    jenkins:   fuse3-libs-3.10.2-5.el9.x86_64
+    jenkins:   libslirp-4.4.0-4.el9.x86_64
+    jenkins:   slirp4netns-1.2.0-3.el9.x86_64
+    jenkins:
+    jenkins: Complete!
+    jenkins: * Enable and start Docker ...
+    jenkins: uavc:  op=load_policy lsm=selinux seqno=4 res=1Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+    jenkins: * Adding vagrant user to docker group ...
+==> jenkins: Running provisioner: shell...
+    jenkins: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230301-6924-fy84pd.sh
+==> jenkins: Running provisioner: shell...
+    jenkins: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230301-6924-sd16b9.sh
+    jenkins: * Unlock Jenkins Installation with GroovyScript ...
+    jenkins:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+    jenkins:                                  Dload  Upload   Total   Spent    Left  Speed
+100 3366k  100 3366k    0     0   717k      0  0:00:04  0:00:04 --:--:--  722k
+    jenkins: * Installing Jenkins Plugins ...
+    jenkins: Installing workflow-aggregator from update center
+    jenkins: Installing schedule-build from update center
+    jenkins: Installing ssh from update center
+    jenkins: Installing github from update center
+    jenkins: Installing pipeline-github from update center
+    jenkins: * Restart Jenkins Plugin to apply new settings ...
+    jenkins: * Build Piplenie Job and running BGapp in Docker Container ...
+==> jenkins: Running provisioner: shell...
+    jenkins: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230301-6924-h3g7mm.sh
+    jenkins: --------------------------------- FINISHED --------------------------------
+    jenkins: ===========================================================================
+    jenkins: =   1 VIRTUAL MASCHINE CREATED WITH JENKINS AND DOCKER HOSTING - [BGAPP]  =
+    jenkins: ===========================================================================
+    jenkins: ---------------------------------- BYE ------------------------------------

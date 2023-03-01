@@ -1,0 +1,528 @@
+Started from command line by admin
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/BGapp_Docker
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build the APP image)
+[Pipeline] sh
++ cd /vagrant/BGapp
++ docker image build -t img-app -f Dockerfile.web .
+#1 [internal] load .dockerignore
+#1 transferring context:
+#1 transferring context: 2B 0.1s done
+#1 DONE 1.0s
+
+#2 [internal] load build definition from Dockerfile.web
+#2 transferring dockerfile: 151B 0.1s done
+#2 DONE 1.2s
+
+#3 [internal] load metadata for docker.io/library/php:8.0-apache
+#3 DONE 4.7s
+
+#4 [1/2] FROM docker.io/library/php:8.0-apache@sha256:ac3ccf11711a6896359f53cafbbfc2895ddb3df037612c9dd2d39120b9962a9d
+#4 resolve docker.io/library/php:8.0-apache@sha256:ac3ccf11711a6896359f53cafbbfc2895ddb3df037612c9dd2d39120b9962a9d
+#4 resolve docker.io/library/php:8.0-apache@sha256:ac3ccf11711a6896359f53cafbbfc2895ddb3df037612c9dd2d39120b9962a9d 0.4s done
+#4 DONE 0.5s
+
+#4 [1/2] FROM docker.io/library/php:8.0-apache@sha256:ac3ccf11711a6896359f53cafbbfc2895ddb3df037612c9dd2d39120b9962a9d
+#4 sha256:ac3ccf11711a6896359f53cafbbfc2895ddb3df037612c9dd2d39120b9962a9d 1.86kB / 1.86kB done
+#4 sha256:54915a4d008c13b652e5d106cfb5010936412d111206ec94c98470032e69bd4c 3.04kB / 3.04kB done
+#4 sha256:04cbceff66dbf3a94992c88c5b8fbe68ad7496c5781a4f868dd1c7778258ae81 12.63kB / 12.63kB done
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 0B / 31.41MB 0.2s
+#4 sha256:0825793cba86d855da45c20858c3c3bd7121ac697fb1741bc38a779e261ab82e 0B / 225B 0.5s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 0B / 91.64MB 0.8s
+#4 sha256:0825793cba86d855da45c20858c3c3bd7121ac697fb1741bc38a779e261ab82e 225B / 225B 1.4s
+#4 sha256:0825793cba86d855da45c20858c3c3bd7121ac697fb1741bc38a779e261ab82e 225B / 225B 1.4s done
+#4 sha256:7e3c5bd9650e8a316cedc37895a14fb3c7555d183f74eabe3888ff504558f8c5 0B / 270B 2.1s
+#4 sha256:7e3c5bd9650e8a316cedc37895a14fb3c7555d183f74eabe3888ff504558f8c5 270B / 270B 2.2s
+#4 sha256:7e3c5bd9650e8a316cedc37895a14fb3c7555d183f74eabe3888ff504558f8c5 270B / 270B 2.4s done
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 0B / 19.24MB 2.9s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 2.10MB / 31.41MB 3.3s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 2.10MB / 91.64MB 6.0s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 1.05MB / 19.24MB 6.5s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 4.13MB / 31.41MB 7.4s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 2.10MB / 19.24MB 7.8s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 3.07MB / 19.24MB 8.6s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 4.16MB / 19.24MB 10.5s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 6.29MB / 31.41MB 10.9s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 5.24MB / 91.64MB 11.1s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 5.24MB / 19.24MB 12.5s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 8.24MB / 31.41MB 13.8s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 6.29MB / 19.24MB 14.1s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 7.34MB / 19.24MB 15.0s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 10.49MB / 31.41MB 16.3s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 9.44MB / 91.64MB 16.5s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 8.39MB / 19.24MB 16.7s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 9.44MB / 19.24MB 18.4s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 12.58MB / 31.41MB 19.2s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 10.49MB / 19.24MB 20.1s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 12.58MB / 91.64MB 21.5s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 11.53MB / 19.24MB 21.5s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 14.68MB / 31.41MB 22.5s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 12.58MB / 19.24MB 22.9s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 13.63MB / 19.24MB 23.9s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 16.47MB / 31.41MB 24.9s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 14.68MB / 19.24MB 25.7s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 17.42MB / 91.64MB 26.4s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 18.14MB / 31.41MB 27.1s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 15.73MB / 19.24MB 27.1s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 19.92MB / 31.41MB 28.6s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 16.78MB / 19.24MB 28.7s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 17.83MB / 19.24MB 30.0s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 21.55MB / 31.41MB 30.7s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 18.87MB / 19.24MB 31.0s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 21.75MB / 91.64MB 31.4s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 23.49MB / 31.41MB 32.3s
+#4 sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 19.24MB / 19.24MB 33.0s done
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 25.17MB / 31.41MB 33.8s
+#4 sha256:1fdaec51865231cd0c095d584d05b75723060bd1a11e587ec77b41c409ffe44b 0B / 477B 35.2s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 27.26MB / 31.41MB 35.8s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 26.21MB / 91.64MB 36.6s
+#4 sha256:1fdaec51865231cd0c095d584d05b75723060bd1a11e587ec77b41c409ffe44b 477B / 477B 36.4s done
+#4 sha256:5bfea1d79d41c2cf0e150c6bf6635559028c824a2443695a77975048c237da2e 0B / 514B 37.2s
+#4 sha256:5bfea1d79d41c2cf0e150c6bf6635559028c824a2443695a77975048c237da2e 514B / 514B 37.7s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 29.07MB / 31.41MB 38.0s
+#4 sha256:5bfea1d79d41c2cf0e150c6bf6635559028c824a2443695a77975048c237da2e 514B / 514B 37.7s done
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 0B / 11.14MB 38.9s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 31.16MB / 31.41MB 40.1s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 708.61kB / 11.14MB 40.1s
+#4 sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 31.41MB / 31.41MB 40.9s done
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 1.46MB / 11.14MB 41.1s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 30.68MB / 91.64MB 41.7s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 2.04MB / 11.14MB 41.7s
+#4 sha256:62b240c2d6439c7a404a6352d4b1163d8ebef42bb920202fd5eed25a0b751026 0B / 496B 41.7s
+#4 sha256:62b240c2d6439c7a404a6352d4b1163d8ebef42bb920202fd5eed25a0b751026 496B / 496B 42.1s
+#4 sha256:62b240c2d6439c7a404a6352d4b1163d8ebef42bb920202fd5eed25a0b751026 496B / 496B 42.2s done
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 2.62MB / 11.14MB 42.8s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 3.48MB / 11.14MB 44.0s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 0B / 10.78MB 44.0s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 778.24kB / 10.78MB 44.4s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 4.12MB / 11.14MB 44.5s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 1.44MB / 10.78MB 45.4s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 4.88MB / 11.14MB 45.9s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 2.10MB / 10.78MB 45.9s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 34.79MB / 91.64MB 46.9s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 5.98MB / 11.14MB 46.9s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 3.08MB / 10.78MB 46.9s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 6.67MB / 11.14MB 47.7s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 7.34MB / 11.14MB 47.9s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 7.91MB / 11.14MB 48.8s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 3.85MB / 10.78MB 49.1s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 8.77MB / 11.14MB 49.9s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 4.43MB / 10.78MB 49.9s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 9.44MB / 11.14MB 50.3s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 5.24MB / 10.78MB 50.3s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 5.87MB / 10.78MB 50.7s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 10.09MB / 11.14MB 51.2s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 6.67MB / 10.78MB 51.7s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 10.89MB / 11.14MB 51.7s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 38.80MB / 91.64MB 52.0s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 7.34MB / 10.78MB 52.2s
+#4 sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 11.14MB / 11.14MB 52.7s done
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 8.12MB / 10.78MB 53.0s
+#4 sha256:d5443b4960685ba57ec3b9810c20a0f723b168d0520a3c9ae6be844674073c43 0B / 2.46kB 53.5s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 8.95MB / 10.78MB 54.0s
+#4 sha256:d5443b4960685ba57ec3b9810c20a0f723b168d0520a3c9ae6be844674073c43 2.46kB / 2.46kB 54.3s
+#4 sha256:d5443b4960685ba57ec3b9810c20a0f723b168d0520a3c9ae6be844674073c43 2.46kB / 2.46kB 54.5s done
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 9.74MB / 10.78MB 54.9s
+#4 sha256:9eeb44b3cac435e43dc8b81041f4d6cd58e51c98776f2f359bdacabbaa5bf7f9 0B / 243B 55.0s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 10.29MB / 10.78MB 55.0s
+#4 sha256:9eeb44b3cac435e43dc8b81041f4d6cd58e51c98776f2f359bdacabbaa5bf7f9 243B / 243B 55.2s
+#4 sha256:9eeb44b3cac435e43dc8b81041f4d6cd58e51c98776f2f359bdacabbaa5bf7f9 243B / 243B 55.3s done
+#4 sha256:7138da2604625267494da5743c2cab87e06d228d0ce4205515369afe959a8f4b 0B / 894B 56.0s
+#4 sha256:7138da2604625267494da5743c2cab87e06d228d0ce4205515369afe959a8f4b 894B / 894B 56.4s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 43.46MB / 91.64MB 56.6s
+#4 sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 10.78MB / 10.78MB 56.6s done
+#4 sha256:7138da2604625267494da5743c2cab87e06d228d0ce4205515369afe959a8f4b 894B / 894B 56.8s done
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 48.21MB / 91.64MB 59.9s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 52.94MB / 91.64MB 63.7s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 7.4s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 57.54MB / 91.64MB 67.5s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 60.12MB / 91.64MB 72.9s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 14.1s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 64.99MB / 91.64MB 77.4s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 19.3s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 69.96MB / 91.64MB 82.0s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 24.5s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 75.50MB / 91.64MB 87.2s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 31.2s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 80.33MB / 91.64MB 92.1s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 36.3s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 84.93MB / 91.64MB 95.7s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 90.18MB / 91.64MB 99.2s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 41.8s
+#4 sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 91.64MB / 91.64MB 101.5s done
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 47.0s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 52.1s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 57.3s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 63.0s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 69.4s
+#4 extracting sha256:bb263680fed18eecdc67f885094df6f589bafc19004839d7fdf141df236a61aa 72.2s done
+#4 extracting sha256:0825793cba86d855da45c20858c3c3bd7121ac697fb1741bc38a779e261ab82e 0.0s done
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 5.2s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 10.7s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 17.8s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 24.1s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 29.9s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 35.2s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 40.2s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 45.6s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 50.7s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 55.9s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 60.9s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 66.5s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 71.6s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 76.7s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 81.9s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 87.1s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 92.5s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 98.0s
+#4 extracting sha256:de3c011d207b2fa9b335817876040ab36845c702e712599e055c5613c0e23154 104.0s done
+#4 extracting sha256:7e3c5bd9650e8a316cedc37895a14fb3c7555d183f74eabe3888ff504558f8c5 0.0s done
+#4 extracting sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc
+#4 extracting sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 5.3s
+#4 extracting sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 10.4s
+#4 extracting sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 15.4s
+#4 extracting sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 20.4s
+#4 extracting sha256:40c3827232f74438f8883d98e1c582ac82c5daf0eed1ad78c404b1679b6f43fc 22.4s done
+#4 extracting sha256:1fdaec51865231cd0c095d584d05b75723060bd1a11e587ec77b41c409ffe44b
+#4 extracting sha256:1fdaec51865231cd0c095d584d05b75723060bd1a11e587ec77b41c409ffe44b 0.0s done
+#4 extracting sha256:5bfea1d79d41c2cf0e150c6bf6635559028c824a2443695a77975048c237da2e done
+#4 extracting sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e
+#4 extracting sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 5.1s
+#4 extracting sha256:4caaa564818e28ed23c6f434ab601ab1358efd07292b86e49dbc3294fcf1727e 5.2s done
+#4 extracting sha256:62b240c2d6439c7a404a6352d4b1163d8ebef42bb920202fd5eed25a0b751026
+#4 extracting sha256:62b240c2d6439c7a404a6352d4b1163d8ebef42bb920202fd5eed25a0b751026 done
+#4 extracting sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a
+#4 extracting sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 5.2s
+#4 extracting sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 10.7s
+#4 extracting sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 15.8s
+#4 extracting sha256:777fcd639ab6e1c6148bac2e5903fd4ce81025ea8020395af127417ca97ecd2a 18.5s done
+#4 extracting sha256:d5443b4960685ba57ec3b9810c20a0f723b168d0520a3c9ae6be844674073c43 0.0s done
+#4 extracting sha256:9eeb44b3cac435e43dc8b81041f4d6cd58e51c98776f2f359bdacabbaa5bf7f9
+#4 extracting sha256:9eeb44b3cac435e43dc8b81041f4d6cd58e51c98776f2f359bdacabbaa5bf7f9 done
+#4 extracting sha256:7138da2604625267494da5743c2cab87e06d228d0ce4205515369afe959a8f4b done
+#4 DONE 310.5s
+
+#5 [2/2] RUN docker-php-ext-install pdo_mysql
+#5 41.62 Configuring for:
+#5 41.62 PHP Api Version:         20200930
+#5 41.62 Zend Module Api No:      20200930
+#5 41.62 Zend Extension Api No:   420200930
+#5 50.98 checking for grep that handles long lines and -e... /bin/grep
+#5 51.04 checking for egrep... /bin/grep -E
+#5 51.09 checking for a sed that does not truncate output... /bin/sed
+#5 51.84 checking for pkg-config... /usr/bin/pkg-config
+#5 51.84 checking pkg-config is at least version 0.9.0... yes
+#5 51.88 checking for cc... cc
+#5 52.49 checking whether the C compiler works... yes
+#5 52.97 checking for C compiler default output file name... a.out
+#5 52.99 checking for suffix of executables... 
+#5 53.64 checking whether we are cross compiling... no
+#5 54.58 checking for suffix of object files... o
+#5 55.14 checking whether we are using the GNU C compiler... yes
+#5 55.44 checking whether cc accepts -g... yes
+#5 55.79 checking for cc option to accept ISO C89... none needed
+#5 56.24 checking how to run the C preprocessor... cc -E
+#5 57.27 checking for icc... no
+#5 57.52 checking for suncc... no
+#5 57.69 checking for system library directory... lib
+#5 57.71 checking if compiler supports -Wl,-rpath,... yes
+#5 58.24 checking build system type... x86_64-pc-linux-gnu
+#5 58.38 checking host system type... x86_64-pc-linux-gnu
+#5 58.40 checking target system type... x86_64-pc-linux-gnu
+#5 59.65 checking for PHP prefix... /usr/local
+#5 59.68 checking for PHP includes... -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib
+#5 59.69 checking for PHP extension directory... /usr/local/lib/php/extensions/no-debug-non-zts-20200930
+#5 59.69 checking for PHP installed headers prefix... /usr/local/include/php
+#5 59.69 checking if debug is enabled... no
+#5 59.91 checking if zts is enabled... no
+#5 60.43 checking for gawk... no
+#5 60.43 checking for nawk... nawk
+#5 60.44 checking if nawk is broken... no
+#5 60.53 checking for MySQL support for PDO... yes, shared
+#5 60.53 checking for the location of libz... no
+#5 60.57 checking for MySQL UNIX socket location... 
+#5 60.66 checking for PDO includes... /usr/local/include/php/ext
+#5 60.99 checking for a sed that does not truncate output... /bin/sed
+#5 61.12 checking for ld used by cc... /usr/bin/ld
+#5 61.32 checking if the linker (/usr/bin/ld) is GNU ld... yes
+#5 61.48 checking for /usr/bin/ld option to reload object files... -r
+#5 61.48 checking for BSD-compatible nm... /usr/bin/nm -B
+#5 61.66 checking whether ln -s works... yes
+#5 61.66 checking how to recognize dependent libraries... pass_all
+#5 62.25 checking for ANSI C header files... yes
+#5 63.68 checking for sys/types.h... yes
+#5 64.19 checking for sys/stat.h... yes
+#5 64.77 checking for stdlib.h... yes
+#5 65.31 checking for string.h... yes
+#5 65.80 checking for memory.h... yes
+#5 66.38 checking for strings.h... yes
+#5 66.97 checking for inttypes.h... yes
+#5 67.58 checking for stdint.h... yes
+#5 68.27 checking for unistd.h... yes
+#5 69.15 checking dlfcn.h usability... yes
+#5 70.37 checking dlfcn.h presence... yes
+#5 70.59 checking for dlfcn.h... yes
+#5 70.64 checking the maximum length of command line arguments... 1572864
+#5 70.76 checking command to parse /usr/bin/nm -B output from cc object... ok
+#5 71.83 checking for objdir... .libs
+#5 72.01 checking for ar... ar
+#5 72.02 checking for ranlib... ranlib
+#5 72.03 checking for strip... strip
+#5 72.76 checking if cc supports -fno-rtti -fno-exceptions... no
+#5 73.22 checking for cc option to produce PIC... -fPIC
+#5 73.23 checking if cc PIC flag -fPIC works... yes
+#5 73.63 checking if cc static flag -static works... yes
+#5 74.29 checking if cc supports -c -o file.o... yes
+#5 74.91 checking whether the cc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+#5 75.20 checking whether -lc should be explicitly linked in... no
+#5 75.63 checking dynamic linker characteristics... GNU/Linux ld.so
+#5 76.16 checking how to hardcode library paths into programs... immediate
+#5 76.19 checking whether stripping libraries is possible... yes
+#5 76.24 checking if libtool supports shared libraries... yes
+#5 76.24 checking whether to build shared libraries... yes
+#5 76.24 checking whether to build static libraries... no
+#5 80.07 
+#5 80.07 creating libtool
+#5 80.53 appending configuration tag "CXX" to libtool
+#5 82.06 configure: patching config.h.in
+#5 82.12 configure: creating ./config.status
+#5 83.38 config.status: creating config.h
+#5 84.05 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --mode=compile cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -c /usr/src/php/ext/pdo_mysql/pdo_mysql.c -o pdo_mysql.lo 
+#5 86.20 mkdir .libs
+#5 86.24  cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -c /usr/src/php/ext/pdo_mysql/pdo_mysql.c  -fPIC -DPIC -o .libs/pdo_mysql.o
+#5 87.44 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --mode=compile cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -c /usr/src/php/ext/pdo_mysql/mysql_driver.c -o mysql_driver.lo 
+#5 89.77  cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -c /usr/src/php/ext/pdo_mysql/mysql_driver.c  -fPIC -DPIC -o .libs/mysql_driver.o
+#5 90.87 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --mode=compile cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -c /usr/src/php/ext/pdo_mysql/mysql_statement.c -o mysql_statement.lo 
+#5 93.14  cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -c /usr/src/php/ext/pdo_mysql/mysql_statement.c  -fPIC -DPIC -o .libs/mysql_statement.o
+#5 94.04 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --mode=link cc -shared -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64  -Wl,-O1 -pie  -o pdo_mysql.la -export-dynamic -avoid-version -prefer-pic -module -rpath /usr/src/php/ext/pdo_mysql/modules  pdo_mysql.lo mysql_driver.lo mysql_statement.lo 
+#5 96.55 cc -shared  .libs/pdo_mysql.o .libs/mysql_driver.o .libs/mysql_statement.o   -Wl,-O1 -Wl,-soname -Wl,pdo_mysql.so -o .libs/pdo_mysql.so
+#5 96.77 creating pdo_mysql.la
+#5 97.03 (cd .libs && rm -f pdo_mysql.la && ln -s ../pdo_mysql.la pdo_mysql.la)
+#5 97.18 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --mode=install cp ./pdo_mysql.la /usr/src/php/ext/pdo_mysql/modules
+#5 97.70 cp ./.libs/pdo_mysql.so /usr/src/php/ext/pdo_mysql/modules/pdo_mysql.so
+#5 97.80 cp ./.libs/pdo_mysql.lai /usr/src/php/ext/pdo_mysql/modules/pdo_mysql.la
+#5 98.08 PATH="$PATH:/sbin" ldconfig -n /usr/src/php/ext/pdo_mysql/modules
+#5 98.18 ----------------------------------------------------------------------
+#5 98.18 Libraries have been installed in:
+#5 98.20    /usr/src/php/ext/pdo_mysql/modules
+#5 98.21 
+#5 98.21 If you ever happen to want to link against installed libraries
+#5 98.21 in a given directory, LIBDIR, you must either use libtool, and
+#5 98.21 specify the full pathname of the library, or use the `-LLIBDIR'
+#5 98.21 flag during linking and do at least one of the following:
+#5 98.21    - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+#5 98.21      during execution
+#5 98.21    - add LIBDIR to the `LD_RUN_PATH' environment variable
+#5 98.21      during linking
+#5 98.21    - use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+#5 98.21    - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+#5 98.21 
+#5 98.21 See any operating system documentation about shared libraries for
+#5 98.21 more information, such as the ld(1) and ld.so(8) manual pages.
+#5 98.25 ----------------------------------------------------------------------
+#5 98.31 
+#5 98.35 Build complete.
+#5 98.41 Don't forget to run 'make test'.
+#5 98.47 
+#5 98.71 + strip --strip-all modules/pdo_mysql.so
+#5 99.51 Installing shared extensions:     /usr/local/lib/php/extensions/no-debug-non-zts-20200930/
+#5 101.0 find . -name \*.gcno -o -name \*.gcda | xargs rm -f
+#5 101.1 find . -name \*.lo -o -name \*.o | xargs rm -f
+#5 101.3 find . -name \*.la -o -name \*.a | xargs rm -f
+#5 101.4 find . -name \*.so | xargs rm -f
+#5 101.6 find . -name .libs -a -type d|xargs rm -rf
+#5 101.7 rm -f libphp.la      modules/* libs/*
+#5 101.7 rm -f ext/opcache/jit/zend_jit_x86.c
+#5 DONE 105.9s
+
+#6 exporting to image
+#6 exporting layers
+#6 exporting layers 1.3s done
+#6 writing image sha256:7517ecbcc838459de014e61da95e2cb15480925b21eda7a77ff89b3a3989993c 0.1s done
+#6 naming to docker.io/library/img-app
+#6 naming to docker.io/library/img-app 0.0s done
+#6 DONE 1.4s
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build the DB image)
+[Pipeline] sh
++ cd /vagrant/BGapp
++ docker image build -t img-db -f Dockerfile.db .
+#1 [internal] load .dockerignore
+#1 transferring context:
+#1 transferring context: 2B 0.2s done
+#1 DONE 0.4s
+
+#2 [internal] load build definition from Dockerfile.db
+#2 transferring dockerfile: 170B 0.1s done
+#2 DONE 0.6s
+
+#3 [internal] load metadata for docker.io/library/mariadb:10.7
+#3 DONE 3.5s
+
+#4 [1/2] FROM docker.io/library/mariadb:10.7@sha256:72ed18be221e143af9b64b2010fcf3f27f07c3ed1dcf1b9389e83703424312e2
+#4 resolve docker.io/library/mariadb:10.7@sha256:72ed18be221e143af9b64b2010fcf3f27f07c3ed1dcf1b9389e83703424312e2
+#4 resolve docker.io/library/mariadb:10.7@sha256:72ed18be221e143af9b64b2010fcf3f27f07c3ed1dcf1b9389e83703424312e2 0.7s done
+#4 DONE 0.7s
+
+#5 [internal] load build context
+#5 transferring context: 1.24kB 0.2s done
+#5 DONE 1.1s
+
+#4 [1/2] FROM docker.io/library/mariadb:10.7@sha256:72ed18be221e143af9b64b2010fcf3f27f07c3ed1dcf1b9389e83703424312e2
+#4 sha256:72ed18be221e143af9b64b2010fcf3f27f07c3ed1dcf1b9389e83703424312e2 979B / 979B done
+#4 sha256:4a46944d8e5b70ede963c91635c58d6b528ba1848d9ec370b9d5dd3cf76c502f 1.99kB / 1.99kB done
+#4 sha256:ab89d409cf6b389168d0bb1b482640219a9195b8b8c0e9010f011b14e9c397f6 10.28kB / 10.28kB done
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 0B / 28.58MB 0.2s
+#4 sha256:578dfcf52320736c07ddd9a0b3857ba8f34fd15113157efff04dd353a21c9ef0 0B / 1.74kB 0.4s
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 0B / 7.05MB 0.9s
+#4 sha256:578dfcf52320736c07ddd9a0b3857ba8f34fd15113157efff04dd353a21c9ef0 1.74kB / 1.74kB 1.3s
+#4 sha256:578dfcf52320736c07ddd9a0b3857ba8f34fd15113157efff04dd353a21c9ef0 1.74kB / 1.74kB 1.3s done
+#4 sha256:64a5db893c1d58f9c0d26ee43ab61e28afbc8fe910429521e667568d8ba77e2b 0B / 149B 2.2s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 2.10MB / 28.58MB 2.5s
+#4 sha256:64a5db893c1d58f9c0d26ee43ab61e28afbc8fe910429521e667568d8ba77e2b 149B / 149B 3.0s
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 1.05MB / 7.05MB 3.2s
+#4 sha256:64a5db893c1d58f9c0d26ee43ab61e28afbc8fe910429521e667568d8ba77e2b 149B / 149B 3.1s done
+#4 sha256:1fde4fc45af0dd169f77e5685df940c0a4751fa992a2f7b87f1e7be61eaff73d 0B / 330B 4.0s
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 2.10MB / 7.05MB 4.3s
+#4 sha256:1fde4fc45af0dd169f77e5685df940c0a4751fa992a2f7b87f1e7be61eaff73d 330B / 330B 4.3s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 4.19MB / 28.58MB 4.5s
+#4 sha256:1fde4fc45af0dd169f77e5685df940c0a4751fa992a2f7b87f1e7be61eaff73d 330B / 330B 4.4s done
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 2.90MB / 7.05MB 5.0s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 0B / 86.38MB 5.2s
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 4.19MB / 7.05MB 5.8s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 6.29MB / 28.58MB 6.1s
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 5.24MB / 7.05MB 6.8s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 8.39MB / 28.58MB 8.0s
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 6.21MB / 7.05MB 8.0s
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 7.05MB / 7.05MB 8.9s
+#4 sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 7.05MB / 7.05MB 9.2s done
+#4 sha256:baf2ef48f6cade230a04efa1c06d77d87b67ed4108ace7f85093ab7861e8fc37 0B / 3.52kB 10.0s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 10.49MB / 28.58MB 10.3s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 3.15MB / 86.38MB 10.3s
+#4 sha256:baf2ef48f6cade230a04efa1c06d77d87b67ed4108ace7f85093ab7861e8fc37 3.52kB / 3.52kB 10.3s
+#4 sha256:baf2ef48f6cade230a04efa1c06d77d87b67ed4108ace7f85093ab7861e8fc37 3.52kB / 3.52kB 10.4s done
+#4 sha256:cf6d7d5ce293428fc05e71ae0a9e60a1c7d611cfed0135f31cf22bd183d1fa95 0B / 6.96kB 11.2s
+#4 sha256:cf6d7d5ce293428fc05e71ae0a9e60a1c7d611cfed0135f31cf22bd183d1fa95 6.96kB / 6.96kB 11.8s
+#4 sha256:cf6d7d5ce293428fc05e71ae0a9e60a1c7d611cfed0135f31cf22bd183d1fa95 6.96kB / 6.96kB 11.8s done
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 12.58MB / 28.58MB 12.3s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 14.15MB / 28.58MB 13.6s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 8.26MB / 86.38MB 14.2s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 15.73MB / 28.58MB 14.7s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 17.29MB / 28.58MB 15.9s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 18.87MB / 28.58MB 16.7s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 12.58MB / 86.38MB 17.6s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 20.97MB / 28.58MB 18.3s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 23.07MB / 28.58MB 19.8s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 25.17MB / 28.58MB 21.3s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 17.83MB / 86.38MB 21.6s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 26.67MB / 28.58MB 22.6s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 28.31MB / 28.58MB 23.5s
+#4 sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 28.58MB / 28.58MB 24.5s done
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 22.77MB / 86.38MB 25.5s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 27.26MB / 86.38MB 28.7s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 32.15MB / 86.38MB 31.7s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 36.70MB / 86.38MB 34.2s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 5.6s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 41.94MB / 86.38MB 38.0s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 46.90MB / 86.38MB 41.0s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 11.2s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 51.32MB / 86.38MB 44.0s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 16.2s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 56.62MB / 86.38MB 48.1s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 61.87MB / 86.38MB 51.0s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 22.0s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 67.11MB / 86.38MB 54.0s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 72.20MB / 86.38MB 57.2s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 27.4s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 76.55MB / 86.38MB 59.8s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 81.79MB / 86.38MB 63.2s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 32.6s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 86.38MB / 86.38MB 66.0s
+#4 sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 86.38MB / 86.38MB 68.1s done
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 37.7s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 42.8s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 47.9s
+#4 extracting sha256:7608715873ec5c02d370e963aa9b19a149023ce218887221d93fe671b3abbf58 52.9s done
+#4 extracting sha256:578dfcf52320736c07ddd9a0b3857ba8f34fd15113157efff04dd353a21c9ef0 0.0s done
+#4 extracting sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb
+#4 extracting sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 5.0s
+#4 extracting sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 10.5s
+#4 extracting sha256:06e052319319471cc8f50bca93636d5ed3610c2e95b9e2a25cc796ed57e9aefb 11.9s done
+#4 extracting sha256:64a5db893c1d58f9c0d26ee43ab61e28afbc8fe910429521e667568d8ba77e2b
+#4 extracting sha256:64a5db893c1d58f9c0d26ee43ab61e28afbc8fe910429521e667568d8ba77e2b 0.0s done
+#4 extracting sha256:1fde4fc45af0dd169f77e5685df940c0a4751fa992a2f7b87f1e7be61eaff73d 0.0s done
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 5.1s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 10.4s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 15.6s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 20.8s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 26.0s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 31.9s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 37.5s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 43.3s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 48.3s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 53.7s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 59.5s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 64.9s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 70.5s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 75.6s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 81.0s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 86.2s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 91.3s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 96.6s
+#4 extracting sha256:f0dd9fc68f18345178984755e543d3aef6af19d8f44c027111da981a0fbf2e72 100.6s done
+#4 extracting sha256:baf2ef48f6cade230a04efa1c06d77d87b67ed4108ace7f85093ab7861e8fc37 0.0s done
+#4 extracting sha256:cf6d7d5ce293428fc05e71ae0a9e60a1c7d611cfed0135f31cf22bd183d1fa95 done
+#4 DONE 218.7s
+
+#6 [2/2] ADD ./db/db_setup.sql /docker-entrypoint-initdb.d/init.sql
+#6 DONE 2.8s
+
+#7 exporting to image
+#7 exporting layers
+#7 exporting layers 0.6s done
+#7 writing image sha256:ddb3b3edc19d05ee0fa7fd5a7282e6fdd110176c72d8656dd555c36adf37318b
+#7 writing image sha256:ddb3b3edc19d05ee0fa7fd5a7282e6fdd110176c72d8656dd555c36adf37318b 0.1s done
+#7 naming to docker.io/library/img-db 0.1s done
+#7 DONE 0.7s
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Create Network for the Containers)
+[Pipeline] sh
++ grep appnet
++ docker network ls
++ docker network create appnet
+ba4863949acb63688322c5ae3be54e20b0882f161a4ca04389ec62f3e88a0fb8
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Start the DB container)
+[Pipeline] sh
++ docker container rm -f co-img-app
+Error response from daemon: No such container: co-img-app
++ docker container run -d -p 9070:80 -v /vagrant/BGapp/web:/var/www/html:ro --name co-img-app --net appnet img-app
+ddee6476334642991f8590fa65356e45757bea14d36512fb317a1547c7c5b17b
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Start the Web container)
+[Pipeline] sh
++ docker container rm -f db
+Error response from daemon: No such container: db
++ docker container run -d --name db --net appnet -e MYSQL_ROOT_PASSWORD=12345 img-db
+c93c33ba73df66478522f0b90f100580a9c8086a2c794048fa36c2718992f0e9
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
